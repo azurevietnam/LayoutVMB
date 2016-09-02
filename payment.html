@@ -1,0 +1,499 @@
+<html>
+<head>
+<title>Travel Agency</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="keywords" content="Travel Agency, Search flight" />
+<meta name="description" content="Travel - template for travel companies">
+<meta name="author" content="K">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- /GOOGLE FONTS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.min.css">
+<link rel="stylesheet" href="css/formValidation.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/mystyles.css">
+
+<script type="text/javascript">siteurl="http://vemaybayabc.com"</script>
+</head>
+<body>
+<div class="global-wrap">
+
+     <header id="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"> <a class="logo" href="index.html"> <img src="img/logo.png" alt="Image Alternative text" title="Image Title" /> </a> </div>
+          <div class="col-md-9">
+            <div class="el-info ">
+              <ul class="list-inline">
+                <li class="hidden-sm hidden-xs"><i class="fa fa-heart box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Tìm chuyến bay dễ dàng</h3>
+                </li>
+                <li class="hidden-sm hidden-xs"><i class="fa  fa-check-square-o box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Xác nhận vé tức thì</h3>
+                </li>
+                <li class="hidden-sm hidden-xs"><i class="fa fa-credit-card box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Thanh toán đơn giản</h3>
+                </li>
+                <li> <i class="fa fa-phone box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Hỗ trợ 24/7<br>
+                    <strong class="text-color text-lg"> 1900 8888</strong></h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-navigation">
+      <div class="container">
+        <div class="nav">
+          <ul class="slimmenu" id="slimmenu">
+            <li class="active"><a href="#">Trang chủ</a> </li>
+            <li><a href="#">Vé rẻ trong tháng</a></li>
+            <li><a href="#">Tin khuyến mãi</a></li>
+            <li><a href="#">Cẩm nang du lịch</a></li>
+            <li><a href="#">Bạn cần biết</a>
+              <ul>
+                <li><a href="#">Hướng dẫn đặt vé</a> </li>
+                <li><a href="#">Hướng dẫn thanh toán</a> </li>
+                <li><a href="#">Thông tin tài khoản</a> </li>
+                <li><a href="#">Câu hỏi thường găp</a> </li>
+              </ul>
+            </li>
+            <li><a href="#">Pages</a>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="domestic.html">Domestic Flight</a></li>
+				<li><a href="international.html">International Flight</a></li>
+                <li><a href="passenger-detail.html">Passenger Detail</a> </li>
+				<li><a href="payment.html">Payment Methods</a></li>
+				<li><a href="complete-booking.html">Complete Bokking</a></li>
+                <li><a href="category.html">Category</a> </li>
+                <li><a href="post.html">Single Post</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="main-content"> 
+    
+    <!-- Breadcrumb -->
+    <div class="page-title-container">
+      <div class="container">
+        <ul class="breadcrumbs list list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li class="active">Payment</li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Breadcrumb -->
+    
+    <div  class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8"> 
+          <!-- Progressbar -->
+	 		
+     <ul class="booking-step list list-inline row list-unstyled">
+      <li class="col-xs-3 step-item">
+			<a href="#"><div class="line"></div>
+            <div class="number">1</div><p class="hidden-xs">Chọn hành trình </p>
+          </a>
+      </li>
+      <li class="col-xs-3 step-item">
+         <a href="#"><div class="line"></div>
+             <div class="number">2</div><p class="hidden-xs">Thông tin hành khách</p>
+           </a>
+      </li>
+      <li class="col-xs-3 step-item active">
+          <div class="line"></div>
+             <div class="number">3</div><p class="hidden-xs">Thông tin thanh toán</p>
+      </li>
+      <li class="col-xs-3 step-item">
+           <div class="line"></div>
+             <div class="number">4</div><p class="hidden-xs">Hoàn tất</p>
+      </li>
+    </ul>
+  		
+           
+          <!-- End Progressbar -->
+          
+          <div class="payment">
+            <form action="thong-tin-thanh-toan" method="post" id="frm_selectpaymentmethod">
+              
+              <!-- THANH TOAN CHUYỂN KHOẢN -->
+              
+              <div class="methods">
+                <div class="methods-header transfer">
+                  <label for="method_transfer" class="methods-header radio radio-inline">
+                  <input type="radio" id="method_transfer" name="radio">
+                  <span class="outer"><span class="inner"></span></span> <span>Chuyển khoản qua ngân hàng</span>
+                  <p>Đây là hình thức thanh toán tối ưu nhất và không mất phí. Quý khách có thể chọn lựa tài khoản ngân hàng chuyển đến cùng hệ thống với cái đang sử dụng nhằm đảm bảo tiền được chuyển sang nhanh. <br>
+                    <strong>Xem danh sách tài khoản ngân hàng <a href="huong-dan-thanh-toan" target="_blank"><span class="text-color"> tại đây</span></a></strong> . </p>
+                  </label>
+                </div>
+                <div class="methods-content" id="content_transfer" style="display: none;">
+                  <h3>Lưu ý</h3>
+                  <p style="padding-left: 10px;"> Khi thực hiện chuyển khoản xin vui lòng ghi rõ mã đơn hàng, tên người liên hệ đặt vé. Sau khi hoàn tất việc CK vui lòng nhắn tin báo có đến số này : <strong class="text-bigger text-color"> 08. 3862 2286 - 0915.824.539</strong> <br>
+                    Vd : JS3213154, Nguyen Tuan Anh, HCM Hanoi <br>
+                    Mã đơn hàng JS3213154, người liên hệ đặt vé là Nguyen Tuan Anh, hành trình Sài Gòn - Hà Nội. <br>
+                    Đơn giản nhất là quý khách gọi điện vào đây : <strong class="text-bigger text-color"> 08. 3862 2286 - 0915.824.539</strong> <br>
+                    Việc thông báo CK chậm trễ hoặc quên thông báo sẽ dẫn đến hủy đặt chỗ booking làm tăng giá vé. Xin quý khách vui lòng lưu ý việc này. Các tranh cãi về sau sẽ không được hãng giải quyết.<br>
+                    <br>
+                  <p class="select">
+                    <input type="submit" name="sm_transfer_method" value="Đặt vé" class="selectpaymentmethod btn-primary">
+                    <span class="waiting">Hệ thống đang xử lý...</span> </p>
+                </div>
+              </div>
+              <!--.methods--> 
+              
+              <!-- THANH TOAN TẠI VĂN PHÒNG -->
+              
+              <div class="methods">
+                <div class="methods-header office">
+                  <label for="method_office" class="methods-header radio radio-inline">
+                  <input type="radio" id="method_office" name="radio">
+                  <span class="outer"><span class="inner"></span></span><span>Đến văn phòng thanh toán</span>
+                  <p>Sau khi đặt hàng thành công, Quý khách vui lòng qua văn phòng vemaybayabc để thanh toán và nhận vé.</p>
+                  </label>
+                </div>
+                <div class="methods-content" id="content_office" style="display: none;">
+                  <p>Quý khách ghé qua địa chỉ : </p>
+                  <span style="font-weight:bold">Vé khuyến mãi không hoàn đổi !!</span>
+                  <div class="clearfix"></div>
+                  <p class="select">
+                    <input type="submit" name="sm_office_method" value="Đặt vé" class="selectpaymentmethod btn-primary">
+                    <span class="waiting">Hệ thống đang xử lý...</span> </p>
+                </div>
+              </div>
+              <!--.methods--> 
+              
+              <!-- THANH TOAN TẠI NHÀ -->
+              
+              <div class="methods">
+                <div class="methods-header home">
+                  <label for="method_athome" class="methods-header radio radio-inline">
+                  <input type="radio" id="method_athome" name="radio">
+                  <span class="outer"><span class="inner"></span></span> <span>Thanh toán tại nhà (Phí 25,000 VND)</span>
+                  <p>Chúng tôi sẽ tiến hành in mặt vé, đi cùng phiếu thu số tiền phải trả của Quý khách. Đội giao vé nhanh sẽ liên hệ quý khách trong thời gian sớm nhất.</p>
+                  </label>
+                </div>
+                <div class="methods-content" id="content_athome" style="display: block;">
+                  <p style="padding: 10px 0;">Thanh toán tại nhà chỉ áp dụng cho các quận huyện trong TP.HCM.</p>
+                  <span style="font-weight:bold">Vé khuyến mãi không hoàn đổi !!</span>
+                  <p class="select">
+                    <input type="submit" name="sm_home_method" value="Đặt vé" class="selectpaymentmethod btn-primary">
+                    <span class="waiting">Hệ thống đang xử lý...</span> </p>
+                </div>
+              </div>
+              <!--.method-->
+              
+            </form>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+		
+          <div class="summary-info bg-dark">
+            <h4>Thông tin đơn hàng</h4>
+            <!-------LƯỢT ĐI-----------> 
+            
+            <a class="link" title="">Chiều đi<span class="pull-right"><i></i></span></a>
+            <table width="100%" class="field-table info">
+              <tbody>
+                <tr>
+                  <td colspan="5"><strong>Giá vé cơ bản</strong></td>
+                </tr>
+                <tr>
+                  <td>Người lớn </td>
+                  <td class="text-right"><b>2</b> x </td>
+                  <td class="text-right">790,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">1,580,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Trẻ em </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">790,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">790,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Em bé </td>
+                  <td  class="text-right"><b>1</b> x </td>
+                  <td  class="text-right">0 VND</td>
+                  <td>=</td>
+                  <td  class="text-right">0 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5"><strong>Thuế và phí</strong></td>
+                </tr>
+                <tr>
+                  <td>Người lớn </td>
+                  <td class="text-right"><b>2</b> x </td>
+                  <td class="text-right">369,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">738,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Trẻ em </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">324,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">324,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Em bé </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">190,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">190,000 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="line"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Tổng giá</td>
+                  <td colspan="3"  class="text-right">3,622,000 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Hành lý thêm</td>
+                  <td colspan="3"  class="text-right"><span id="booking-info-dep-bag-total">0 VND</span></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Giảm giá</td>
+                  <td colspan="3"  class="text-right">- 0 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="line"></td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="text-right"><p>Lượt đi tổng cộng</p>
+                    <p class="text-bigger">3,622,000 VND</p></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-------LƯỢT VỂ-----------> 
+            <a class="link" title="">Chiều về<span class="pull-right"><i></i></span></a>
+            <table width="100%" class="field-table info">
+              <tbody>
+                <tr>
+                  <td colspan="5"><strong>Giá vé cơ bản</strong></td>
+                </tr>
+                <tr>
+                  <td>Người lớn </td>
+                  <td class="text-right"><b>2</b> x </td>
+                  <td class="text-right">900,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">1,800,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Trẻ em </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">900,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">900,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Em bé </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">0 VND</td>
+                  <td>=</td>
+                  <td  class="text-right">0 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5"><strong>Thuế và phí</strong></td>
+                </tr>
+                <tr>
+                  <td>Người lớn </td>
+                  <td class="text-right"><b>2</b> x </td>
+                  <td class="text-right">380,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">760,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Trẻ em </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">335,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">335,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Em bé </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">150,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">150,000 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="line"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Tổng giá</td>
+                  <td colspan="3" class="text-right">3,945,000 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Hành lý thêm</td>
+                  <td colspan="3"  class="text-right"><span>0 VND</span></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Giảm giá</td>
+                  <td colspan="3"  class="text-right">- 0 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="line"></td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="text-right">Lượt về tổng cộng
+                    </p>
+                    <p class="text-bigger">3,945,000 VND</p></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="summary-info-line gap"> <span class="pull-left">TỔNG CỘNG</span> <span class="pull-right text-color text-bigger">7,567,000 VND</span> </div>
+          </div>
+		 <div class="booking-help wgbox">
+            <h4 class="title-underline"> Hướng dẫn</h4>
+            <div class="box-content">
+              <ul class="list-unstyled">
+                <li> <a href="" title=""> <img src="img/icon01.png">Hướng dẫn đặt vé</a> </li>
+                <li> <a href="" title=""> <img src="img/icon02.png">Hướng dẫn thanh toán</a></li>
+                <li> <a href="" title=""> <img src="img/icon01.png">Câu hỏi thường gặp</a> </li>
+                <li><img src="img/icon03.png" class="pull-left"> <span class="text-color text-lg"> 08. 3862 2286</span></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav_up" id="nav_up"><i class="fa fa-angle-up"></i></div>
+  
+  <footer id="main-footer">
+    <div class="footer-primary">
+      <div class="container">
+        <div class="row row-wrap">
+          <div class="col-md-3">
+            <h4>Follow us</h4>
+            <ul class="list list-horizontal">
+              <li> <a class="fa fa-facebook box-icon-md box-icon-black box-icon-to-normal  animate-icon-bottom-to-top" href="#"></a> </li>
+              <li> <a class="fa fa-twitter box-icon-md box-icon-black box-icon-to-normal animate-icon-bottom-to-top" href="#"></a> </li>
+              <li> <a class="fa fa-google-plus box-icon-md box-icon-black box-icon-to-normal animate-icon-bottom-to-top" href="#"></a> </li>
+            </ul>
+            <a href="#" class="logo mt15" title="home"><img src="img/logo_white.png"alt="logo"></a> </div>
+          <div class="col-md-3">
+            <h4>Vé máy bay nội địa</h4>
+            <ul class="list list-space">
+              <li> <a href="#ve-may-bay-di-ha-noi.html" title="">Vé máy bay đi Hà Nội </a></li>
+              <li> <a href="#ve-may-bay-di-da-nang.html" title="">Vé máy bay đi Đà Nẵng </a></li>
+              <li> <a href="#ve-may-bay-di-vinh.html" title="">Vé máy bay đi Vinh </a></li>
+              <li> <a href="#ve-may-bay-di-hai-phong.html" title="">Vé máy bay đi Hải Phòng </a></li>
+              <li> <a href="#ve-may-bay-phu-quoc.html" title="">Vé máy bay Phú Quốc </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Vé máy bay quốc tế</h4>
+            <ul class="list list-space">
+              <li> <a href="#ve-may-bay-di-my.html" title=""> Vé máy bay đi Mỹ </a></li>
+              <li> <a href="#ve-may-bay-di-uc.html" title=""> Vé máy bay đi Úc </a></li>
+              <li> <a href="#ve-may-bay-di-anh.html" title=""> Vé máy bay đi Anh </a></li>
+              <li> <a href="#ve-may-bay-di-phap.html" title=""> Vé máy bay đi Pháp </a></li>
+              <li> <a href="#ve-may-bay-di-trung-quoc.html" title=""> Vé máy bay đi Trung Quốc </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul class="list list-space">
+              <li><a href="#kiem-tra-don-hang" title="Kiểm tra đơn hàng">Kiểm tra đơn hàng</a></li>
+              <li><a href="#huong-dan-dat-ve" title="Hướng dẫn đặt vé">Hướng dẫn đặt vé</a></li>
+              <li><a href="#huong-dan-thanh-toan" title="Thông tin thanh toán">Thông tin thanh toán</a></li>
+              <li><a href="#lcau-hoi-thuong-gap" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a></li>
+              <li><a href="#lien-he" title="Liên hệ chúng tôi">Liên hệ chúng tôi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6  copyright-block">
+            <p class="copyright-text">© Ve may bay ABC. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list list-horizontal list-space  pull-right">
+              <li> <img src="img/secure.png" alt=""> </li>
+              <li> <img src="img/authentication.png" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/libs/jquery-1.11.1.min.js"></script> 
+<script src='js/libs/jquery-ui.1.10.4.min.js'></script> 
+<script src="js/libs/modernizr.js"></script>
+<script src='js/libs/jquery-migrate.min.js'></script> 
+<script src="js/libs/bootstrap.min.js"></script> 
+<script src="js/libs/formValidation.min.js"></script> 
+<script src="js/libs/framework.bootstrap.min.js"></script> 
+<script src="js/libs/slimmenu.js"></script> 
+<script src="js/libs/dropit.js"></script> 
+<script src="js/libs/ionrangeslider.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> 
+<script src="js/libs/typeahead.bundle.min.js"></script> 
+<script src="js/libs/magnific.js"></script> 
+<script src="js/libs/owl-carousel.js"></script> 
+<script src="js/libs/wow.min.js"></script> 
+<script src='js/libs/jquery.tablesorter.js'></script>
+<script src='js/libs/jquery.tablesorter.pager.js'></script>
+<script src='js/libs/pager-custom-controls.js'></script>
+<script src="js/JQuery.main.js"></script> 
+<script src="js/JQuery.home.js"></script> 
+<script src="js/JQuery.sidebar.js"></script> 
+<script src="js/JQuery.result.js"></script> 
+<script src="js/JQuery.payment.js"></script> 
+<script src="js/JQuery.complete.js"></script> 
+
+<!--Facebook Googel+ Comment--> 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '299001920440908',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> 
+<script type="text/javascript">
+		window.___gcfg = {lang: 'vi'};
+		 
+		(function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/platform.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+    </script> 
+
+<!--End Commentbox-->
+
+</body>
+</html>

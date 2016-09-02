@@ -1,0 +1,1161 @@
+<html>
+<head>
+<title>Travel Agency</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="keywords" content="Travel Agency, Search flight" />
+<meta name="description" content="Travel - template for travel companies">
+<meta name="author" content="K">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- /GOOGLE FONTS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.min.css">
+<link rel="stylesheet" href="css/formValidation.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/mystyles.css">
+<script type="text/javascript">siteurl="http://vemaybayabc.com"</script>
+</head>
+<body>
+<div class="global-wrap">
+
+     <header id="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"> <a class="logo" href="index.html"> <img src="img/logo.png" alt="Image Alternative text" title="Image Title" /> </a> </div>
+          <div class="col-md-9">
+            <div class="el-info ">
+              <ul class="list-inline">
+                <li class="hidden-sm hidden-xs"><i class="fa fa-heart box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Tìm chuyến bay dễ dàng</h3>
+                </li>
+                <li class="hidden-sm hidden-xs"><i class="fa  fa-check-square-o box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Xác nhận vé tức thì</h3>
+                </li>
+                <li class="hidden-sm hidden-xs"><i class="fa fa-credit-card box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Thanh toán đơn giản</h3>
+                </li>
+                <li> <i class="fa fa-phone box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Hỗ trợ 24/7<br>
+                    <strong class="text-color text-lg"> 1900 8888</strong></h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-navigation">
+      <div class="container">
+        <div class="nav">
+          <ul class="slimmenu" id="slimmenu">
+            <li class="active"><a href="#">Trang chủ</a> </li>
+            <li><a href="#">Vé rẻ trong tháng</a></li>
+            <li><a href="#">Tin khuyến mãi</a></li>
+            <li><a href="#">Cẩm nang du lịch</a></li>
+            <li><a href="#">Bạn cần biết</a>
+              <ul>
+                <li><a href="#">Hướng dẫn đặt vé</a> </li>
+                <li><a href="#">Hướng dẫn thanh toán</a> </li>
+                <li><a href="#">Thông tin tài khoản</a> </li>
+                <li><a href="#">Câu hỏi thường găp</a> </li>
+              </ul>
+            </li>
+            <li><a href="#">Pages</a>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="domestic.html">Domestic Flight</a></li>
+				<li><a href="international.html">International Flight</a></li>
+                <li><a href="passenger-detail.html">Passenger Detail</a> </li>
+				<li><a href="payment.html">Payment Methods</a></li>
+				<li><a href="complete-booking.html">Complete Bokking</a></li>
+                <li><a href="category.html">Category</a> </li>
+                <li><a href="post.html">Single Post</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <div id="main-content">
+    <!-- Breadcrumb -->
+    <div class="page-title-container">
+      <div class="container">
+        <ul class="breadcrumbs list list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li class="active">Flight Result</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Breadcrumb -->
+    <!--Dialog search-->
+	<div class="container">
+      <div class="mfp-with-anim mfp-hide mfp-dialog mfp-search-dialog dialog-search" id="dialog-search">
+        <h3>Thay đổi tìm kiếm</h3>
+		 <form action="tim-chuyen-bay" method="post" id="frmDlSearch">
+              <div class="form-group">
+                <label class="radio radio-inline">
+                  <input type="radio" class="dldirection checkbox-custom" name="direction" id="dloneway" value="1" checked="checked">
+                  <span class="outer"><span class="inner"></span></span>Một chiều </label>
+                <label class="radio radio-inline checked">
+                  <input type="radio" class="dldirection checkbox-custom" name="direction" id="dlroundtrip" value="0">
+                  <span class="outer"><span class="inner"></span></span>Khứ hồi </label>
+              </div>
+              <div class="form-group form-group-icon-left"><i class="fa fa-map-marker input-icon input-icon-hightlight"></i>
+                <label>Nơi đi</label>
+                <input name="dep" id="dldep" class="typeahead-flights form-control" placeholder="City, Hotel Name or U.S. Zip Code" type="text" />
+              </div>
+              <div class="form-group form-group-icon-left"><i class="fa fa-map-marker input-icon input-icon-hightlight"></i>
+                <label>Nơi đến</label>
+                <input name="des" id="dldes" class="typeahead-flights form-control" placeholder="City, Hotel Name or U.S. Zip Code" type="text" />
+              </div>
+              <div class="form-group form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                <label>Ngày đi</label>
+                <input type="text" value="23/06/2016" class="dates form-control" name="depdate" id="dldepdate" placeholder="dd/mm/yyyy" autocomplete="off" readonly>
+              </div>
+              <div class="form-group form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                <label>Ngày về</label>
+                <input type="text" value="" class="dates form-control" name="retdate" id="dlretdate" placeholder="dd/mm/yyyy" autocomplete="off" readonly disabled="disabled">
+              </div>
+              <div class="row form-group">
+                <div class="col-md-4 col-sm-4 col-xs-4 dlquantity">
+                  <label for="dladult">
+                  <label>Người lớn</label>
+                  </label>
+                  <select id="dladult" name="adult" class="form-control">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 dlquantity">
+                  <label for="dlchild">
+                  <label>Trẻ em</label>
+                  </label>
+                  <select id="dlchild" name="child" class="form-control">
+                    <option value="0" selected="selected">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <!--fqtity-->
+                
+                <div class="col-md-4 col-sm-4 col-xs-4 dlquantity">
+                  <label for="dlinfant">
+                  <label>Em bé</label>
+                  </label>
+                  <select id="dlinfant" name="infant" class="form-control">
+                    <option value="0" selected="selected">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-primary pull-right" type="submit" name="btnsearch" id="dlbtnsearch"> Tìm chuyến bay</button>
+              <div class="clearfix"></div>
+            </form>
+        
+	  </div>
+	 
+     </div>
+    <!---End Dialog search-->
+    
+    
+    <div class="container">
+      <div class="row">
+          
+        <div id="loadresultfirst"></div>
+
+        <div class="col-xs-12 col-sm-12 col-md-8">
+		  <div id="result" style="display: block;"> 
+            
+            <!--Thong Tin Chung-->
+            <div class="sinfo">
+              <p class="location"> <span class="fontplace">Ho Chi Minh, VN (SGN)</span> <span class="separator"></span> <span class="fontplace">London Uk, GB (LON)</span> 
+			  <a class="popup-text" href="#dialog-search" data-effect="mfp-zoom-out">Thay đổi hành trình <i class="text-lg soap-icon-search"></i></a>
+			  </p>
+              <table class="info">
+                <tbody>
+                  <tr>
+                    <td><span>Loại vé : </span><strong>Khứ hồi</strong></td>
+                    <td><span>Hành khách: </span> <strong>1 người lớn</strong></td>
+                  </tr>
+                  <tr>
+                    <td><span class="indate">Ngày đi : <strong>19/07/2016</strong></span></td>
+                    <td><span class="indate">Ngày về : <strong>24/08/2016</strong></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="session-time"> <p>Kết quả search tại thời điểm: <strong>26/06/2016 12:07:37</strong></p> <p><span>Lưu ý: </span>Kết quả  có giá trị <b>Tham khảo</b> trong vòng <strong> 10 phút </strong> tính từ thời điểm search.</p> </div>
+            <form action="#" method="post" name="frmSelectFlight">
+              <section class="inter-fl-block" stop="1 stop|1 stop" data-dep-time="16:40">
+                <div class="card-body">
+                  <div class="card-main row is-flex">
+                    <div class="col-md-8 col-xs-12">
+                       
+                        <div class="outbound-segment">
+                        	<span class="pl-direction take-off text-color"><i class="soap-icon-plane-right mt10"></i></span>
+	                        <span class="span-img">
+                             	<span class="airline-name MH"><img src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH"></span>
+                            </span>    
+                           <span class="travel-date">19/07</span>	
+                                  <span class="travel-time">
+                                    <span class="departure-time">16:40</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                    <span class="arrival-time"> 05:55</span>
+                                  </span>
+                               <span class="duration">19h 15m</span> 
+                               <span class="travel-stop">1 stops</span>
+                              
+                         
+                          </div>
+                        <div class="inbound-segment">
+                         <span class="pl-direction landing text-color"><i class="soap-icon-plane-left mt10"></i></span>
+	                         <span class="span-img">
+                             	<span class="airline-name MH"><img src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH"></span>
+                            </span>   
+                        	<span class="travel-date">24/08</span>	
+                                  <span class="travel-time">
+                                    <span class="departure-time">11:55</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                    <span class="arrival-time"> 10:00</span>
+                                  </span>
+                               <span class="duration">19h 15m</span> 
+                               <span class="travel-stop">1 stops</span>
+                          </div>
+                       
+                    </div>
+                    <!--end direction-->
+                    <div class="card-show-details col-md-2 col-xs-1 pd0"> <a class="fl-view-detail" href="#"><span class="hidden-xs">Chi tiết</span></a> </div>
+                   
+                    <div class="route-best-fare booking  col-md-2 col-xs-11 pd0"> 
+                      <div class="fare-price price pull-right">
+                      <span>Giá cơ bản</span>
+                      <span class="rate no-tax" vnd="17,328,000|đ" usd="760|$" eur="728|€">
+                      <strong class="amount">17,328,000</strong><strong class="currency"><sup>đ</sup></strong></span>
+                      <span class="rate incl-tax" style="display:none">
+                      <strong class="amount">22,091,920</strong> <strong class="currency"><sup>đ</sup></strong></span>
+                        <input type="submit" name="sm_fselect" value="Tiếp tục" title="Tiếp tục" class="btn btn-primary">
+                       </div>
+                    </div>
+                  
+                  </div>
+                  
+                </div>
+                <div class="card-drawer fl-route-detail" style="display: none;">
+                  <div class="card-drawer-details">
+                    <div class="flight-direction-outbound flight-direction">
+                      <div class="fl-header">
+                        <p>Chiều đi: <span>Ho Chi Minh</span> - <span>London</span></p>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 759</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>16:40</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Ho Chi Minh</span><br>
+                          <strong>Ho Chi Minh Son Nhut Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>19:35</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                      </div>
+                      <div class="layover">
+                        <div>Thay đổi máy bay tại <strong>Kuala Lumpur</strong> Thời gian giữa các chuyến bay: <strong>3h 40m</strong></div>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 2</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>23:15</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>05:55</strong>, 20/07/2016 <br>
+                          <span class="fl-code">London Heathrow</span><br>
+                          <strong>London Heathrow Airport</strong> </div>
+                      </div>
+                    </div>
+                    <div class="flight-direction-inbound flight-direction">
+                       <div class="fl-header">
+                        <p>Chiều về: <span>London</span> - <span>Ho Chi Minh</span></p>
+                      </div>
+                       
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 3</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>11:55</strong>, 24/08/2016 <br>
+                          <span class="fl-code">London Heathrow</span><br>
+                          <strong>London Heathrow Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>07:45</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                      </div>
+                      <div class="layover">
+                        <div>Thay đổi máy bay tại <strong>Kuala Lumpur</strong> Thời gian giữa các chuyến bay: <strong>1h 20m</strong></div>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 750</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>09:05</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>10:00</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Ho Chi Minh</span><br>
+                          <strong>Ho Chi Minh Son Nhut Airport</strong> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- PRICE -->
+                  <div class="table-responsive">
+                  <table class="inter-fl-price bg-gray table" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                      <tr>
+                        <th width="20%">Loại hành khách</th>
+                        <th width="20%">Số lượng vé</th>
+                        <th width="20%">Giá mỗi vé</th>
+                        <th width="20%">Thuế &amp; Phí</th>
+                        <th width="20%">Tổng giá</th>
+                      </tr>
+                      <tr>
+                        <td align="center">Người lớn</td>
+                        <td align="center">1</td>
+                        <td align="right"><span class="incl-tax"><span class="amount">17,328,000</span> <span class="currency"><sup>đ</sup></span></span></td>
+                        <td align="right"><span class="incl-tax"><span class="amount">4,763,920</span> <span class="currency"><sup>đ</sup></span></span></td>
+                        <td align="right"><span class="incl-tax"><span class="amount">22,091,920</span> <span class="currency"><sup>đ</sup></span></span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" align="right"><strong>Tổng giá 1 người</strong></td>
+                        <td align="right"><strong class="total-amount red-color"> <span class="rate incl-tax" vnd="22,091,920|đ" usd="969|$" eur="928|€"><strong class="amount">22,091,920</strong> <strong class="currency"><sup>đ</sup></strong></span> </strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+              </section>
+              
+              <!-- .inter-fl-block -->
+            </form>
+            <form action="#" method="post" name="frmSelectFlight">
+              <section class="inter-fl-block" stop="1 stop|1 stop">
+                <div class="card-body">
+                  <div class="card-main row is-flex">
+                    <div class="col-md-8 col-xs-12">
+                       
+                        <div class="outbound-segment">
+                        	<span class="pl-direction take-off text-color"><i class="soap-icon-plane-right mt10"></i></span>
+	                        <span class="span-img">
+                             	<span class="airline-name CX"><img src="img/airline-icons/inter-icon-66x42/CX.png" alt="CX"></span>
+                            </span>    
+                           <span class="travel-date">19/07</span>	
+                                  <span class="travel-time">
+                                    <span class="departure-time">19:05</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                    <span class="arrival-time"> 15:15</span>
+                                  </span>
+                               <span class="duration">26h 10m</span> 
+                               <span class="travel-stop">1 stops</span>
+                              
+                         
+                          </div>
+                        <div class="inbound-segment">
+                         <span class="pl-direction landing text-color"><i class="soap-icon-plane-left mt10"></i></span>
+	                         <span class="span-img">
+                             	<span class="airline-name CX"><img src="img/airline-icons/inter-icon-66x42/CX.png" alt="CX"></span>
+                            </span>   
+                        	<span class="travel-date">24/08</span>	
+                                  <span class="travel-time">
+                                    <span class="departure-time">12:25</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                    <span class="arrival-time"> 10:10</span>
+                                  </span>
+                               <span class="duration">15h 45m</span> 
+                               <span class="travel-stop">1 stops</span>
+                          </div>
+                       
+                    </div>
+                    <!--end direction-->
+                    <div class="card-show-details col-md-2 col-xs-1 pd0"> <a class="fl-view-detail" href="#"><span class="hidden-xs">Chi tiết</span></a> </div>
+                   
+                    <div class="route-best-fare booking  col-md-2 col-xs-11 pd0"> 
+                      <div class="fare-price price pull-right">
+                      <span>Giá cơ bản</span>
+                      <span class="rate no-tax" vnd="17,328,000|đ" usd="760|$" eur="728|€">
+                      <strong class="amount">17,943,600</strong><strong class="currency"><sup>đ</sup></strong></span>
+                      <span class="rate incl-tax" style="display:none">
+                      <strong class="amount">23,060,920</strong> <strong class="currency"><sup>đ</sup></strong></span>
+                        <input type="submit" name="sm_fselect" value="Tiếp tục" title="Tiếp tục" class="btn btn-primary">
+                       </div>
+                    </div>
+                  
+                  </div>
+                  
+                </div>
+                <div class="card-drawer fl-route-detail" style="display: none;">
+                  <div class="card-drawer-details">
+                    <div class="flight-direction-outbound flight-direction">
+                      <div class="fl-header">
+                        <p>Chiều đi: <span>Ho Chi Minh</span> - <span>London</span></p>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+
+                            (<strong>MH 759</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>16:40</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Ho Chi Minh</span><br>
+                          <strong>Ho Chi Minh Son Nhut Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>19:35</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                      </div>
+                      <div class="layover">
+                        <div>Thay đổi máy bay tại <strong>Kuala Lumpur</strong> Thời gian giữa các chuyến bay: <strong>3h 40m</strong></div>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 2</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>23:15</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>05:55</strong>, 20/07/2016 <br>
+                          <span class="fl-code">London Heathrow</span><br>
+                          <strong>London Heathrow Airport</strong> </div>
+                      </div>
+                    </div>
+                    <div class="flight-direction-inbound flight-direction">
+                       <div class="fl-header">
+                        <p>Chiều về: <span>London</span> - <span>Ho Chi Minh</span></p>
+                      </div>
+                       
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img src="img/airline-icons/inter-icon-66x42/CX.png" alt="CX">
+                          <p>Malaysia Airlines
+                            (<strong>MH 3</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>11:55</strong>, 24/08/2016 <br>
+                          <span class="fl-code">London Heathrow</span><br>
+                          <strong>London Heathrow Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>07:45</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                      </div>
+                      <div class="layover">
+                        <div>Thay đổi máy bay tại <strong>Kuala Lumpur</strong> Thời gian giữa các chuyến bay: <strong>1h 20m</strong></div>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/CX.png" alt="CX">
+                          <p>Malaysia Airlines
+                            (<strong>MH 750</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>09:05</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>10:00</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Ho Chi Minh</span><br>
+                          <strong>Ho Chi Minh Son Nhut Airport</strong> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- PRICE -->
+                  <div class="table-responsive">
+                  <table class="inter-fl-price bg-gray table" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                      <tr>
+                        <th width="20%">Loại hành khách</th>
+                        <th width="20%">Số lượng vé</th>
+                        <th width="20%">Giá mỗi vé</th>
+                        <th width="20%">Thuế &amp; Phí</th>
+                        <th width="20%">Tổng giá</th>
+                      </tr>
+                      <tr>
+                        <td align="center">Người lớn</td>
+                        <td align="center">1</td>
+                        <td align="right"><span class="incl-tax"><span class="amount">17,328,000</span> <span class="currency"><sup>đ</sup></span></span></td>
+                        <td align="right"><span class="incl-tax"><span class="amount">4,763,920</span> <span class="currency"><sup>đ</sup></span></span></td>
+                        <td align="right"><span class="incl-tax"><span class="amount">22,091,920</span> <span class="currency"><sup>đ</sup></span></span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" align="right"><strong>Tổng giá 1 người</strong></td>
+                        <td align="right"><strong class="total-amount red-color"> <span class="rate incl-tax" vnd="22,091,920|đ" usd="969|$" eur="928|€"><strong class="amount">22,091,920</strong> <strong class="currency"><sup>đ</sup></strong></span> </strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+              </section>
+              
+              <!-- .inter-fl-block -->
+            </form>
+            
+            <form action="#" method="post" name="frmSelectFlight">
+              <section class="inter-fl-block" stop="2 stop|2 stop">
+                <div class="card-body">
+                  <div class="card-main row is-flex">
+                    <div class="col-md-8 col-xs-12">
+                       
+                        <div class="outbound-segment">
+                        	<span class="pl-direction take-off text-color"><i class="soap-icon-plane-right mt10"></i></span>
+	                        <span class="span-img">
+                             	<span class="airline-name 9W"><img src="img/airline-icons/inter-icon-66x42/9W.png" alt="9W"></span>
+                            </span>    
+                           <span class="travel-date">19/07</span>	
+                                  <span class="travel-time">
+                                    <span class="departure-time">08:50</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                    <span class="arrival-time">06:45</span>
+                                  </span>
+                               <span class="duration">27h 55m</span> 
+                               <span class="travel-stop">2 stops</span>
+                              
+                         
+                          </div>
+                        <div class="inbound-segment">
+                         <span class="pl-direction landing text-color"><i class="soap-icon-plane-left mt10"></i></span>
+	                         <span class="span-img">
+                             	<span class="airline-name 9W"><img src="img/airline-icons/inter-icon-66x42/9W.png" alt="9W"></span>
+                            </span>   
+                        	<span class="travel-date">24/008</span>	
+                                  <span class="travel-time">
+                                    <span class="departure-time">09:30</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                    <span class="arrival-time">12:50</span>
+                                  </span>
+                               <span class="duration">27h 55m</span> 
+                               <span class="travel-stop">2 stops</span>
+                          </div>
+                       
+                    </div>
+                    <!--end direction-->
+                    <div class="card-show-details col-md-2 col-xs-1 pd0"> <a class="fl-view-detail" href="#"><span class="hidden-xs">Chi tiết</span></a> </div>
+                   
+                    <div class="route-best-fare booking  col-md-2 col-xs-11 pd0"> 
+                      <div class="fare-price price pull-right">
+                      <span>Giá cơ bản</span>
+                      <span class="rate no-tax" vnd="17,328,000|đ" usd="760|$" eur="728|€">
+                      <strong class="amount">13,132,800</strong><strong class="currency"><sup>đ</sup></strong></span>
+                      <span class="rate incl-tax" style="display:none">
+                      <strong class="amount">23,368,720</strong> <strong class="currency"><sup>đ</sup></strong></span>
+                        <input type="submit" name="sm_fselect" value="Tiếp tục" title="Tiếp tục" class="btn btn-primary">
+                       </div>
+                    </div>
+                  
+                  </div>
+                  
+                </div>
+                <div class="card-drawer fl-route-detail" style="display: none;">
+                  <div class="card-drawer-details">
+                    <div class="flight-direction-outbound flight-direction">
+                      <div class="fl-header">
+                        <p>Chiều đi: <span>Ho Chi Minh</span> - <span>London</span></p>
+                      </div>
+                      <div class="flight-leg2">
+				<div class="fl-flightno  col-xs-4"> 
+					<img align="absmiddle" src="img/airline-icons/inter-icon-66x42/9W.png" alt="9W">
+					<p>Jet Airways<br>
+					(<strong>9W 4307</strong>)</p>
+				</div>                
+				<div class="fl-from  col-xs-4"> 
+						<strong>08:50</strong>, 19/07/2016 <br>
+							<span class="fl-code">Ho Chi Minh</span><br>
+						<strong>Ho Chi Minh Son Nhut Airport</strong>
+					</div>
+                  <div class="fl-to col-xs-4">
+						<strong>10:20</strong>, 19/07/2016 <br>
+						<span class="fl-code">Bangkok Suvarnabhumi</span><br>
+						<strong>Bangkok Suvarnabhumi Intl Airport</strong>
+					</div>
+				</div>
+                      <div class="layover">
+					<div>Thay đổi máy bay tại <strong>Bangkok Suvarnabhumi</strong>
+					Thời gian giữa các chuyến bay: <strong>10h 35m</strong></div>
+				</div>
+                      <div class="flight-leg2">
+				<div class="fl-flightno  col-xs-4"> 
+					<img align="absmiddle" src="img/airline-icons/inter-icon-66x42/9W.png" alt="9W">
+					<p>Jet Airways<br>
+					(<strong>9W 67</strong>)</p>
+				</div>                
+				<div class="fl-from  col-xs-4"> 
+						<strong>20:55</strong>, 19/07/2016 <br>
+							<span class="fl-code">Bangkok Suvarnabhumi</span><br>
+						<strong>Bangkok Suvarnabhumi Intl Airport</strong>
+					</div>
+                  <div class="fl-to col-xs-4">
+						<strong>23:50</strong>, 19/07/2016 <br>
+						<span class="fl-code">Mumbai</span><br>
+						<strong>Mumbai Chhatrapati Shivaji Airport</strong>
+					</div>
+				</div>
+                <div class="layover">
+					<div>Thay đổi máy bay tại <strong>Mumbai</strong>
+					Thời gian giữa các chuyến bay: <strong>1h 50m</strong></div>
+				</div>
+                <div class="flight-leg2">
+				<div class="fl-flightno  col-xs-4"> 
+					<img src="img/airline-icons/inter-icon-66x42/9W.png" alt="9W">
+					<p>Jet Airways<br>
+					(<strong>9W 120</strong>)</p>
+				</div>                
+				<div class="fl-from  col-xs-4"> 
+						<strong>01:40</strong>, 20/07/2016 <br>
+							<span class="fl-code">Mumbai</span><br>
+						<strong>Mumbai Chhatrapati Shivaji Airport</strong>
+					</div>
+                  <div class="fl-to col-xs-4">
+						<strong>06:45</strong>, 20/07/2016 <br>
+						<span class="fl-code">London Heathrow</span><br>
+						<strong>London Heathrow Airport</strong>
+					</div>
+				</div>
+                      
+                    </div>
+                    <div class="flight-direction-inbound flight-direction">
+                       <div class="fl-header">
+                        <p>Chiều về: <span>London</span> - <span>Ho Chi Minh</span></p>
+                      </div>
+                      <div class="flight-leg2">
+					<div class="fl-flightno  col-xs-4"> 
+						<im src="imgs/airline-icons/inter-icon-66x42/9W.png" alt="9W">
+						<p>Jet Airways
+						(<strong>9W 119</strong>)</p>
+					</div>
+                  <div class="fl-from  col-xs-4"> 
+						<strong>09:30</strong>, 24/08/2016 <br>
+							<span class="fl-code">London Heathrow</span><br>
+						<strong>London Heathrow Airport</strong>
+					</div>
+                  <div class="fl-to col-xs-4">
+						<strong>23:10</strong>, 24/08/2016 <br>
+						<span class="fl-code">Mumbai</span><br>
+						<strong>Mumbai Chhatrapati Shivaji Airport</strong>
+					</div>
+				</div> 
+                      <div class="layover">
+					<div>Thay đổi máy bay tại <strong>Mumbai</strong>
+					Thời gian giữa các chuyến bay: <strong>1h 55m</strong></div>
+				</div>
+                <div class="flight-leg2">
+					<div class="fl-flightno  col-xs-4"> 
+						<img src="img/airline-icons/inter-icon-66x42/9W.png" alt="9W">
+						<p>Jet Airways
+						(<strong>9W 62</strong>)</p>
+					</div>
+                  <div class="fl-from  col-xs-4"> 
+						<strong>01:05</strong>, 25/08/2016 <br>
+							<span class="fl-code">Mumbai</span><br>
+						<strong>Mumbai Chhatrapati Shivaji Airport</strong>
+					</div>
+                  <div class="fl-to col-xs-4">
+						<strong>06:50</strong>, 25/08/2016 <br>
+						<span class="fl-code">Bangkok Suvarnabhumi</span><br>
+						<strong>Bangkok Suvarnabhumi Intl Airport</strong>
+					</div>
+				</div>
+                <div class="layover">
+					<div>Thay đổi máy bay tại <strong>Bangkok Suvarnabhumi</strong>
+					Thời gian giữa các chuyến bay: <strong>4h 30m</strong></div>
+				</div>
+                <div class="flight-leg2">
+					<div class="fl-flightno  col-xs-4"> 
+						<img src="img/airline-icons/inter-icon-66x42/9W.png" alt="9W">
+						<p>Jet Airways
+						(<strong>9W 4310</strong>)</p>
+					</div>
+                  <div class="fl-from  col-xs-4"> 
+						<strong>11:20</strong>, 25/08/2016 <br>
+							<span class="fl-code">Bangkok Suvarnabhumi</span><br>
+						<strong>Bangkok Suvarnabhumi Intl Airport</strong>
+					</div>
+                  <div class="fl-to col-xs-4">
+						<strong>12:50</strong>, 25/08/2016 <br>
+						<span class="fl-code">Ho Chi Minh</span><br>
+						<strong>Ho Chi Minh Son Nhut Airport</strong>
+					</div>
+				</div>
+                      
+                      
+                    </div>
+                  </div>
+                  <!-- PRICE -->
+                  <div class="table-responsive">
+                  <table class="inter-fl-price bg-gray table" cellspacing="0" cellpadding="0" border="0">
+            	   
+                    	 
+                        	<tbody><tr>
+                            	<th width="20%">Loại hành khách</th>
+                                <th width="20%">Số lượng vé</th>
+                                <th width="20%">Giá mỗi vé</th>
+                                <th width="20%">Thuế &amp; Phí</th>
+                                <th width="20%">Tổng giá</th>
+                            </tr>
+                            <tr>
+                            	<td align="center">Người lớn</td>
+								<td align="center">1</td>
+                                <td align="right">
+									<span class="incl-tax"><span class="amount">13,132,800</span> <span class="currency"><sup>đ</sup></span></span>
+								</td>
+								<td align="right">
+									<span class="incl-tax"><span class="amount">10,235,920</span> <span class="currency"><sup>đ</sup></span></span>
+								</td>
+								<td align="right">
+									<span class="incl-tax"><span class="amount">23,368,720</span> <span class="currency"><sup>đ</sup></span></span>
+								</td> 
+                            </tr>
+                                                                                    <tr>
+                            	<td colspan="4" align="right"><strong>Tổng giá 1 người</strong></td>
+                                <td align="right">
+									<strong class="total-amount red-color">
+										<span class="rate incl-tax"><strong class="amount">23,368,720</strong> <strong class="currency"><sup>đ</sup></strong></span>
+									</strong>
+							</td>
+                            </tr>
+                        
+            </tbody></table>
+                </div>
+                </div>
+              </section>
+              
+              <!-- .inter-fl-block -->
+            </form>
+            <form action="#" method="post" name="frmSelectFlight">
+              <section class="inter-fl-block" stop="1 stop|1 stop">
+                <div class="card-body">
+                  <div class="card-main row is-flex">
+                    <div class="col-md-8 col-xs-12">
+                       
+                        <div class="outbound-segment">
+                        	<span class="pl-direction take-off text-color"><i class="soap-icon-plane-right mt10"></i></span>
+	                        <span class="span-img">
+                             	<span class="airline-name VN"><img src="img/airline-icons/inter-icon-66x42/VN.png" alt="VN"></span>
+                            </span>    
+                           <span class="travel-date">19/07</span>	
+                                  <span class="travel-time">
+                                    <span class="departure-time">08:50</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                    <span class="arrival-time">19:25</span>
+                                  </span>
+                               <span class="duration">16h 35m</span> 
+                               <span class="travel-stop">1 stops</span>
+                              
+                         
+                          </div>
+                        <div class="inbound-segment">
+                         <span class="pl-direction landing text-color"><i class="soap-icon-plane-left mt10"></i></span>
+	                         <span class="span-img">
+                             	<span class="airline-name BR"><img src="img/airline-icons/inter-icon-66x42/BR.png" alt="BR"></span>
+                            </span>   
+                        	<span class="travel-date">24/08</span>	
+                                  <span class="travel-time">
+                                    <span class="departure-time">21:35</span>
+                                    <i class="fa fa-long-arrow-right"></i>
+                                    <span class="arrival-time"> 21:00</span>
+                                  </span>
+                               <span class="duration">17h 25m</span> 
+                               <span class="travel-stop">1 stops</span>
+                          </div>
+                       
+                    </div>
+                    <!--end direction-->
+                    <div class="card-show-details col-md-2 col-xs-1 pd0"> <a class="fl-view-detail" href="#"><span class="hidden-xs">Chi tiết</span></a> </div>
+                   
+                    <div class="route-best-fare booking  col-md-2 col-xs-11 pd0"> 
+                      <div class="fare-price price pull-right">
+                      <span>Giá cơ bản</span>
+                      <span class="rate no-tax">
+                      <strong class="amount">15,937,200</strong><strong class="currency"><sup>đ</sup></strong></span>
+                      <span class="rate incl-tax" style="display:none">
+                      <strong class="amount">23,938,720</strong> <strong class="currency"><sup>đ</sup></strong></span>
+                        <input type="submit" name="sm_fselect" value="Tiếp tục" title="Tiếp tục" class="btn btn-primary">
+                       </div>
+                    </div>
+                  
+                  </div>
+                  
+                </div>
+                <div class="card-drawer fl-route-detail" style="display: none;">
+                  <div class="card-drawer-details">
+                    <div class="flight-direction-outbound flight-direction">
+                      <div class="fl-header">
+                        <p>Chiều đi: <span>Ho Chi Minh</span> - <span>London</span></p>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 759</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>16:40</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Ho Chi Minh</span><br>
+                          <strong>Ho Chi Minh Son Nhut Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>19:35</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                      </div>
+                      <div class="layover">
+                        <div>Thay đổi máy bay tại <strong>Kuala Lumpur</strong> Thời gian giữa các chuyến bay: <strong>3h 40m</strong></div>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 2</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>23:15</strong>, 19/07/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>05:55</strong>, 20/07/2016 <br>
+                          <span class="fl-code">London Heathrow</span><br>
+                          <strong>London Heathrow Airport</strong> </div>
+                      </div>
+                    </div>
+                    <div class="flight-direction-inbound flight-direction">
+                       <div class="fl-header">
+                        <p>Chiều về: <span>London</span> - <span>Ho Chi Minh</span></p>
+                      </div>
+                       
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 3</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>11:55</strong>, 24/08/2016 <br>
+                          <span class="fl-code">London Heathrow</span><br>
+                          <strong>London Heathrow Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>07:45</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                      </div>
+                      <div class="layover">
+                        <div>Thay đổi máy bay tại <strong>Kuala Lumpur</strong> Thời gian giữa các chuyến bay: <strong>1h 20m</strong></div>
+                      </div>
+                      <div class="flight-leg2">
+                        <div class="fl-flightno  col-xs-4"> <img align="absmiddle" src="img/airline-icons/inter-icon-66x42/MH.png" alt="MH">
+                          <p>Malaysia Airlines
+                            (<strong>MH 750</strong>)</p>
+                        </div>
+                        <div class="fl-from  col-xs-4"> <strong>09:05</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Kuala Lumpur</span><br>
+                          <strong>Kuala Lumpur Int Airport</strong> </div>
+                        <div class="fl-to col-xs-4"> <strong>10:00</strong>, 25/08/2016 <br>
+                          <span class="fl-code">Ho Chi Minh</span><br>
+                          <strong>Ho Chi Minh Son Nhut Airport</strong> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- PRICE -->
+                  <div class="table-responsive">
+                  <table class="inter-fl-price bg-gray table" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                      <tr>
+                        <th width="20%">Loại hành khách</th>
+                        <th width="20%">Số lượng vé</th>
+                        <th width="20%">Giá mỗi vé</th>
+                        <th width="20%">Thuế &amp; Phí</th>
+                        <th width="20%">Tổng giá</th>
+                      </tr>
+                      <tr>
+                        <td align="center">Người lớn</td>
+                        <td align="center">1</td>
+                        <td align="right"><span class="incl-tax"><span class="amount">17,328,000</span> <span class="currency"><sup>đ</sup></span></span></td>
+                        <td align="right"><span class="incl-tax"><span class="amount">4,763,920</span> <span class="currency"><sup>đ</sup></span></span></td>
+                        <td align="right"><span class="incl-tax"><span class="amount">22,091,920</span> <span class="currency"><sup>đ</sup></span></span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" align="right"><strong>Tổng giá 1 người</strong></td>
+                        <td align="right"><strong class="total-amount red-color"> <span class="rate incl-tax" vnd="22,091,920|đ" usd="969|$" eur="928|€"><strong class="amount">22,091,920</strong> <strong class="currency"><sup>đ</sup></strong></span> </strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+              </section>
+              
+              <!-- .inter-fl-block -->
+            </form>
+            
+            
+            
+          </div>
+        </div>
+        <div id="wgbox" class="col-xs-12 col-sm-12 col-md-4" style="display: block;">
+          <div class="wgbox">
+            
+            <div class="borderSort">
+            <h5 class="title-underline">Điều kiện lọc</h5>
+            
+                  <ul class="list list-unstyled">
+                        <li class=""><label class="radio checked" for="priceBase">
+                            <input type="radio" name="rblDisplayMode" checked="checked" value="base" id="priceBase">
+                            <span class="outer"><span class="inner"></span></span>Giá cơ bản cho 1 người</label></li>
+                        <li class="checked"><label class="radio" for="priceFull">
+                            <input type="radio" name="rblDisplayMode" value="full" id="priceFull">
+                            <span class="outer"><span class="inner"></span></span>Giá cho 1 người đã gồm thuế &amp; phí</label></li>
+                    </ul>
+                </div>
+            <!--End Theo theo gia  co ban-->
+            <div class="borderSort">
+             <h5 class="title-underline">Số trạm chuyển tiếp</h5>
+            
+                  <ul class="list list-unstyled">
+                        <li class="checked"><label class="radio checked" for="TypeFlight_1">
+                            <input type="radio" value="" checked="checked" name="rblTypeFlight" id="TypeFlight_1">
+                            <span class="outer"><span class="inner"></span></span>&nbsp;Tất cả</label></li>
+                        <li><label class="radio" for="TypeFlight_2">
+                            <input type="radio" value="direct" name="rblTypeFlight" id="TypeFlight_2">
+                            <span class="outer"><span class="inner"></span></span>&nbsp;Bay thẳng</label></li>
+                        <li><label class="radio" for="TypeFlight_3">
+                            <input type="radio" value="1 stop" name="rblTypeFlight" id="TypeFlight_3">
+                            <span class="outer"><span class="inner"></span></span>&nbsp;1 trạm chuyển tiếp</label></li>
+                        <li><label class="radio" for="TypeFlight_4">
+                            <input type="radio" value="2 stop" name="rblTypeFlight" id="TypeFlight_4">
+                            <span class="outer"><span class="inner"></span></span>&nbsp;2 trạm chuyển tiếp</label></li>
+                    </ul>
+                </div>
+            <!--End theo tram chuyen tiep-->
+            <div class="borderSort">
+            <h5 class="title-underline">Hãng hàng không</h5>
+            
+                  <ul  id="inter-airlines" class="list list-unstyled">
+                        <li class="checked"><label class="radio checked" for="rblAirline_0">
+                            <input style="float:left;" type="radio" value="" name="rblAirline" checked="checked" id="rblAirline_0">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Hiển thị tất cả</label></li>
+                        
+                        <li><label class="airname radio" for="rblAirline_MH">
+                            	<input class="airname" type="radio" value="MH" name="rblAirline" id="rblAirline_MH">
+                            	<span class="outer"><span class="inner"></span></span> &nbsp;Malaysia Airlines
+                             	<span class="pull-right"><img class="airlogo" alt="MH" src="img/airline-icons/inter-icon-66x42/MH.png"></span> 
+                         	</label>
+                         </li>
+                           
+                           
+                        
+                        <li><label class="airname radio" for="rblAirline_9W">
+                            <input class="airname" type="radio" value="9W" name="rblAirline" id="rblAirline_9W">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Jet Airways
+                        <span class="pull-right"><img class="airlogo" alt="9W" src="img/airline-icons/inter-icon-66x42/9W.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_MU">
+                            <input class="airname" type="radio" value="MU" name="rblAirline" id="rblAirline_MU">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;China Eastern Airlines
+                        <span class="pull-right"><img class="airlogo" alt="MU" src="img/airline-icons/inter-icon-66x42/MU.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_VN">
+                            <input class="airname" type="radio" value="VN" name="rblAirline" id="rblAirline_VN">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Vietnam Airlines
+                        <span class="pull-right"><img class="airlogo" alt="VN" src="img/airline-icons/inter-icon-66x42/VN.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_BR">
+                            <input class="airname" type="radio" value="BR" name="rblAirline" id="rblAirline_BR">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Eva Airways
+                        <span class="pull-right"><img class="airlogo" alt="BR" src="img/airline-icons/inter-icon-66x42/BR.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_TG">
+                            <input class="airname" type="radio" value="TG" name="rblAirline" id="rblAirline_TG">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Thai Airways Intl...
+                        <span class="pull-right"><img class="airlogo" alt="TG" src="img/airline-icons/inter-icon-66x42/TG.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_EK">
+                            <input class="airname" type="radio" value="EK" name="rblAirline" id="rblAirline_EK">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Emirates Airlines
+                        <span class="pull-right"><img class="airlogo" alt="EK" src="img/airline-icons/inter-icon-66x42/EK.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_QR">
+
+                            <input class="airname" type="radio" value="QR" name="rblAirline" id="rblAirline_QR">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Qatar Airways
+                        <span class="pull-right"><img class="airlogo" alt="QR" src="img/airline-icons/inter-icon-66x42/QR.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_TK">
+                            <input class="airname" type="radio" value="TK" name="rblAirline" id="rblAirline_TK">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Turkish Airlines
+                        <span class="pull-right"><img class="airlogo" alt="TK" src="img/airline-icons/inter-icon-66x42/TK.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_KL">
+                            <input class="airname" type="radio" value="KL" name="rblAirline" id="rblAirline_KL">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Klm Royal Dutch...
+                        	<span class="pull-right"><img class="airlogo" alt="KL" src="img/airline-icons/inter-icon-66x42/KL.png"></span>
+                        </label></li>
+                        <li><label class="airname radio" for="rblAirline_AF">
+                            <input class="airname" type="radio" value="AF" name="rblAirline" id="rblAirline_AF">
+                            <span class="outer"><span class="inner"></span></span> &nbsp;Air France
+                        <span class="pull-right"><img class="airlogo" alt="AF" src="img/airline-icons/inter-icon-66x42/AF.png"></span>
+                        </label></li>
+                  </ul>
+                </div>
+            
+            
+            <!--End theo hang--> 
+            <div>
+				<h5 class="title-underline">Thời gian khởi hành</h5>
+				<input type="text" id="time-slider">
+			</div>
+          </div>
+          <div class="booking-help wgbox">
+            <h5 class="title-underline"> Hướng dẫn</h5>
+            <div class="box-content">
+              <ul class="list-unstyled">
+                <li> <a href="" title=""> <img src="img/icon01.png">Hướng dẫn đặt vé</a> </li>
+                <li> <a href="" title=""> <img src="img/icon02.png">Hướng dẫn thanh toán</a></li>
+                <li> <a href="" title=""> <img src="img/icon01.png">Câu hỏi thường gặp</a> </li>
+                <li><img src="img/icon03.png" class="pull-left"> <span class="text-color text-lg"> 08. 3862 2286</span></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <img class="img-responsive" src="img/ads.jpg" alt=""> </div>
+      </div>
+    </div>
+  </div>
+  
+   <div class="nav_up" id="nav_up"><i class="fa fa-angle-up"></i></div>
+  <footer id="main-footer">
+    <div class="footer-primary">
+      <div class="container">
+        <div class="row row-wrap">
+          <div class="col-md-3">
+            <h4>Follow us</h4>
+            <ul class="list list-horizontal">
+              <li> <a class="fa fa-facebook box-icon-md box-icon-black box-icon-to-normal  animate-icon-bottom-to-top" href="#"></a> </li>
+              <li> <a class="fa fa-twitter box-icon-md box-icon-black box-icon-to-normal animate-icon-bottom-to-top" href="#"></a> </li>
+              <li> <a class="fa fa-google-plus box-icon-md box-icon-black box-icon-to-normal animate-icon-bottom-to-top" href="#"></a> </li>
+            </ul>
+            <a href="#" class="logo mt15" title="home"><img src="img/logo_white.png"alt="logo"></a> </div>
+          <div class="col-md-3">
+            <h4>Vé máy bay nội địa</h4>
+            <ul class="list list-space">
+              <li> <a href="#ve-may-bay-di-ha-noi.html" title="">Vé máy bay đi Hà Nội </a></li>
+              <li> <a href="#ve-may-bay-di-da-nang.html" title="">Vé máy bay đi Đà Nẵng </a></li>
+              <li> <a href="#ve-may-bay-di-vinh.html" title="">Vé máy bay đi Vinh </a></li>
+              <li> <a href="#ve-may-bay-di-hai-phong.html" title="">Vé máy bay đi Hải Phòng </a></li>
+              <li> <a href="#ve-may-bay-phu-quoc.html" title="">Vé máy bay Phú Quốc </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Vé máy bay quốc tế</h4>
+            <ul class="list list-space">
+              <li> <a href="#ve-may-bay-di-my.html" title=""> Vé máy bay đi Mỹ </a></li>
+              <li> <a href="#ve-may-bay-di-uc.html" title=""> Vé máy bay đi Úc </a></li>
+              <li> <a href="#ve-may-bay-di-anh.html" title=""> Vé máy bay đi Anh </a></li>
+              <li> <a href="#ve-may-bay-di-phap.html" title=""> Vé máy bay đi Pháp </a></li>
+              <li> <a href="#ve-may-bay-di-trung-quoc.html" title=""> Vé máy bay đi Trung Quốc </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul class="list list-space">
+              <li><a href="#kiem-tra-don-hang" title="Kiểm tra đơn hàng">Kiểm tra đơn hàng</a></li>
+              <li><a href="#huong-dan-dat-ve" title="Hướng dẫn đặt vé">Hướng dẫn đặt vé</a></li>
+              <li><a href="#huong-dan-thanh-toan" title="Thông tin thanh toán">Thông tin thanh toán</a></li>
+              <li><a href="#lcau-hoi-thuong-gap" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a></li>
+              <li><a href="#lien-he" title="Liên hệ chúng tôi">Liên hệ chúng tôi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6  copyright-block">
+            <p class="copyright-text">© Ve may bay ABC. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list list-horizontal list-space  pull-right">
+              <li> <img src="img/secure.png" alt=""> </li>
+              <li> <img src="img/authentication.png" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+ </div>
+ 
+<script src="js/libs/jquery-1.11.1.min.js"></script> 
+<script src='js/libs/jquery-ui.1.10.4.min.js'></script> 
+<script src="js/libs/modernizr.js"></script>
+<script src='js/libs/jquery-migrate.min.js'></script> 
+<script src="js/libs/bootstrap.min.js"></script> 
+<script src="js/libs/formValidation.min.js"></script> 
+<script src="js/libs/framework.bootstrap.min.js"></script> 
+<script src="js/libs/slimmenu.js"></script> 
+<script src="js/libs/dropit.js"></script> 
+<script src="js/libs/ionrangeslider.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> 
+<script src="js/libs/typeahead.bundle.min.js"></script> 
+<script src="js/libs/magnific.js"></script> 
+<script src="js/libs/owl-carousel.js"></script> 
+<script src="js/libs/wow.min.js"></script> 
+<script src='js/libs/jquery.tablesorter.js'></script>
+<script src='js/libs/jquery.tablesorter.pager.js'></script>
+<script src='js/libs/pager-custom-controls.js'></script>
+<script src="js/JQuery.main.js"></script> 
+<script src="js/JQuery.home.js"></script> 
+<script src="js/JQuery.sidebar.js"></script> 
+<script src="js/JQuery.result.js"></script> 
+<script src="js/JQuery.payment.js"></script> 
+<script src="js/JQuery.complete.js"></script> 
+<script src="js/JQuery.dlsearch.js"></script>
+
+
+ <!--Facebook Googel+ Comment--> 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '299001920440908',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> 
+<script type="text/javascript">
+		window.___gcfg = {lang: 'vi'};
+		 
+		(function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/platform.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+    </script> 
+
+<!--End Commentbox-->
+
+
+</body>
+</html>

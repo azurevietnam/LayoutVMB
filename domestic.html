@@ -1,0 +1,979 @@
+<html>
+<head>
+<title>Travel Agency</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="keywords" content="Travel Agency, Search flight" />
+<meta name="description" content="Travel - template for travel companies">
+<meta name="author" content="K">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- /GOOGLE FONTS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.min.css">
+<link rel="stylesheet" href="css/formValidation.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/mystyles.css">
+
+<script type="text/javascript">siteurl="http://vemaybayabc.com"</script>
+</head>
+<body>
+<div class="global-wrap">
+
+     <header id="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"> <a class="logo" href="index.html"> <img src="img/logo.png" alt="Image Alternative text" title="Image Title" /> </a> </div>
+          <div class="col-md-9">
+            <div class="el-info ">
+              <ul class="list-inline">
+                <li class="hidden-sm hidden-xs"><i class="fa fa-heart box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Tìm chuyến bay dễ dàng</h3>
+                </li>
+                <li class="hidden-sm hidden-xs"><i class="fa  fa-check-square-o box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Xác nhận vé tức thì</h3>
+                </li>
+                <li class="hidden-sm hidden-xs"><i class="fa fa-credit-card box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Thanh toán đơn giản</h3>
+                </li>
+                <li> <i class="fa fa-phone box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Hỗ trợ 24/7<br>
+                    <strong class="text-color text-lg"> 1900 8888</strong></h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-navigation">
+      <div class="container">
+        <div class="nav">
+          <ul class="slimmenu" id="slimmenu">
+            <li class="active"><a href="#">Trang chủ</a> </li>
+            <li><a href="#">Vé rẻ trong tháng</a></li>
+            <li><a href="#">Tin khuyến mãi</a></li>
+            <li><a href="#">Cẩm nang du lịch</a></li>
+            <li><a href="#">Bạn cần biết</a>
+              <ul>
+                <li><a href="#">Hướng dẫn đặt vé</a> </li>
+                <li><a href="#">Hướng dẫn thanh toán</a> </li>
+                <li><a href="#">Thông tin tài khoản</a> </li>
+                <li><a href="#">Câu hỏi thường găp</a> </li>
+              </ul>
+            </li>
+            <li><a href="#">Pages</a>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="domestic.html">Domestic Flight</a></li>
+				<li><a href="international.html">International Flight</a></li>
+                <li><a href="passenger-detail.html">Passenger Detail</a> </li>
+				<li><a href="payment.html">Payment Methods</a></li>
+				<li><a href="complete-booking.html">Complete Bokking</a></li>
+                <li><a href="category.html">Category</a> </li>
+                <li><a href="post.html">Single Post</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="main-content"> 
+    <!-- Breadcrumb -->
+    <div class="page-title-container">
+      <div class="container">
+        <ul class="breadcrumbs list list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li class="active">Flights result</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Breadcrumb -->
+	
+    <!--Dialog search-->
+	<div class="container">
+      <div class="mfp-with-anim mfp-hide mfp-dialog mfp-search-dialog dialog-search" id="dialog-search">
+        <h3>Thay đổi tìm kiếm</h3>
+		 <form action="tim-chuyen-bay" method="post" id="frmDlSearch">
+              <div class="form-group">
+                <label class="radio radio-inline">
+                  <input type="radio" class="dldirection checkbox-custom" name="direction" id="dloneway" value="1" checked="checked">
+                  <span class="outer"><span class="inner"></span></span>Một chiều </label>
+                <label class="radio radio-inline checked">
+                  <input type="radio" class="dldirection checkbox-custom" name="direction" id="dlroundtrip" value="0">
+                  <span class="outer"><span class="inner"></span></span>Khứ hồi </label>
+              </div>
+              <div class="form-group form-group-icon-left"><i class="fa fa-map-marker input-icon input-icon-hightlight"></i>
+                <label>Nơi đi</label>
+                <input name="dep" id="dldep" class="typeahead-flights form-control" placeholder="City, Hotel Name or U.S. Zip Code" type="text" />
+              </div>
+              <div class="form-group form-group-icon-left"><i class="fa fa-map-marker input-icon input-icon-hightlight"></i>
+                <label>Nơi đến</label>
+                <input name="des" id="dldes" class="typeahead-flights form-control" placeholder="City, Hotel Name or U.S. Zip Code" type="text" />
+              </div>
+              <div class="form-group form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                <label>Ngày đi</label>
+                <input type="text" value="23/06/2016" class="dates form-control" name="depdate" id="dldepdate" placeholder="dd/mm/yyyy" autocomplete="off" readonly>
+              </div>
+              <div class="form-group form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                <label>Ngày về</label>
+                <input type="text" value="" class="dates form-control" name="retdate" id="dlretdate" placeholder="dd/mm/yyyy" autocomplete="off" readonly disabled="disabled">
+              </div>
+              <div class="row form-group">
+                <div class="col-md-4 col-sm-4 col-xs-4 dlquantity">
+                  <label for="dladult">
+                  <label>Người lớn</label>
+                  </label>
+                  <select id="dladult" name="adult" class="form-control">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 dlquantity">
+                  <label for="dlchild">
+                  <label>Trẻ em</label>
+                  </label>
+                  <select id="dlchild" name="child" class="form-control">
+                    <option value="0" selected="selected">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <!--fqtity-->
+                
+                <div class="col-md-4 col-sm-4 col-xs-4 dlquantity">
+                  <label for="dlinfant">
+                  <label>Em bé</label>
+                  </label>
+                  <select id="dlinfant" name="infant" class="form-control">
+                    <option value="0" selected="selected">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-primary pull-right" type="submit" name="btnsearch" id="dlbtnsearch"> Tìm chuyến bay</button>
+              <div class="clearfix"></div>
+            </form>
+        
+	  </div>
+     </div>
+    <!---End Dialog search-->
+    
+	<div class="container">
+      <div class="row">
+        <div id="loadresultfirst"></div>
+        <div class="col-xs-12 col-sm-12 col-md-8"> 
+          <script type="text/javascript">
+									var SessionID='f6a559af7e5693fd94d80d52e805b514';
+									var Direction=0;
+									var DirectionText='Khứ hồi';
+									var Source='SGN';
+									var Destination='HAN';
+									var SourceCity='Hồ Chí Minh';
+									var DesCity='Hà Nội';
+									var Departdate='29/06/2016';
+									var Returndate='05/07/2016';
+									var Adult=1;
+									var Child=0;
+									var Infant=0;
+									var PassengerText='1 người lớn';
+									var CountActive=3;
+									var Hotline='';
+								</script>
+          <div id="result" style="display: block;">
+		  
+            <form action="#" method="post" id="frmSelectFlight">
+              <div class="fare">
+			  <div class="sinfo">
+              <p class="location"> <span class="fontplace">Ho Chi Minh, VN (SGN)</span> <span class="separator"></span> <span class="fontplace">Ha Noi, VN (HAN)</span> </p>
+              <table class="info">
+                <tbody>
+                  <tr>
+                    <td><span>Loại vé : </span><strong>Khứ hồi</strong></td>
+                    <td><span>Hành khách: </span> <strong>1 người lớn</strong></td>
+                  </tr>
+                  <tr>
+                    <td><span class="indate">Ngày đi : <strong>19/07/2016</strong></span></td>
+                    <td><span class="indate">Ngày về : <strong>24/08/2016</strong></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+			
+                <div class="session-time">
+                  <p>Kết quả search tại thời điểm: <strong>26/06/2016 12:07:37</strong></p>
+                  <p><span>Lưu ý: </span>Kết quả  có giá trị <b>Tham khảo</b> trong vòng <strong> 10 phút </strong> tính từ thời điểm search.</p>
+                </div>
+                <!--Thong Tin Chang Di-->
+                <div class="plane-title">
+                  <div class="col-md-12"> <i class="fa fa-map-signs text-lg"></i> <strong>Chiều đi : </strong> <span class="big">Hồ Chí Minh</span> - <span class="big">Hà Nội</span>
+				  <a class="popup-text pull-right text-white" href="#dialog-search" data-effect="mfp-zoom-out"><span class="hidden-xs">Thay đổi hành trình</span> <i class="text-lg soap-icon-search"></i></a>
+				  </div>
+                </div>
+                <ul class="date-picker hidden-xs" style="display: block;">
+                  <li class="firstli"> <a rel="27/06/2016" class="changedepartflight"> <span>Thứ 2</span> <span>27/06/2016</span> </a> </li>
+                  <li> <a rel="28/06/2016" class="changedepartflight"> <span>Thứ 3</span> <span>28/06/2016</span> </a> </li>
+                  <li class="active"> <a rel="29/06/2016" class="changedepartflight"> <span>Thứ 4</span> <span>29/06/2016</span> </a> </li>
+                  <li> <a rel="30/06/2016" class="changedepartflight"> <span>Thứ 5</span> <span>30/06/2016</span> </a> </li>
+                  <li> <a rel="01/07/2016" class="changedepartflight"> <span>Thứ 6</span> <span>01/07/2016</span> </a> </li>
+                  <li> <a rel="02/07/2016" class="changedepartflight"> <span>Thứ 7</span> <span>02/07/2016</span> </a> </li>
+                  <li> <a rel="03/07/2016" class="changedepartflight"> <span>Chủ nhật</span> <span>03/07/2016</span> </a> </li>
+                </ul>
+                <!--Thong Tin Chang Di-->
+                
+                <table class="table tablesorter flightlist" border="0" id="OutBound">
+                  <thead class="hidden">
+                    <tr>
+                      <th class="sortairport">Chuyến bay</th>
+                      <th class="sorttime">Khởi hành</th>
+                      <th class="sorttime">Hạ cánh</th>
+                      <th class="sortprice">Giá vé</th>
+                      <th>Chi tiết</th>
+                      <th>Chọn</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="lineresult-main js odd">
+                      <td class="f_code bg_js">BL 806
+					  <span class="good-price">Giá tốt</span>
+					  </td>
+                      <td class="f_time"><strong>23:15</strong> <span>Tan Son Nhat</span></td>
+                      <td class="f_time"><strong>01:20</strong> <span>Noi Bai</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="js14669699288"><span>Chi tiết vé</span></a><br>
+                        
+                        <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-js14669699288" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-js14669699288">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé--></td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightdep" class="selectflight" value="js14669699288" id="selectflightretjs14669699288">
+                          <label for="selectflightretjs14669699288">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj even">
+                      <td class="f_code bg_vj">VJ134
+					  <span class="good-price">Giá tốt</span></td>
+                      <td class="f_time"><strong>22:35</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_time"><strong>00:40</strong><span>Noi Bai</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992217"><span>Chi tiết vé</span></a><br>
+                        
+                        <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992217" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992217">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép đổi cho cả hành trìnhThu phí 352,000vnđ/1 khách/1 chặng bay</p>
+                              <p><span>Thay đổi hành trình : </span>Được phép, thu phí 352,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 352,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 4 tiếng.</p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé--></td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightdep" class="selectflight" value="vj146696992217" id="selectflightretvj146696992217">
+                          <label for="selectflightretvj146696992217">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj odd">
+                      <td class="f_code bg_vj">VJ184
+					   <span class="good-price">Giá tốt</span></td>
+                      <td class="f_time"><strong>22:40</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_time"><strong>00:45</strong><span>Noi Bai</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992218"><span>Chi tiết vé</span></a><br>
+                        
+                        <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992218" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992218">
+                          <h4 class="modal-title">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép đổi cho cả hành trìnhThu phí 352,000vnđ/1 khách/1 chặng bay</p>
+                              <p><span>Thay đổi hành trình : </span>Được phép, thu phí 352,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 352,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 4 tiếng.</p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé--></td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightdep" class="selectflight" value="vj146696992218" id="selectflightretvj146696992218">
+                          <label for="selectflightretvj146696992218">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj even">
+                      <td class="f_code bg_vj">VJ186</td>
+                      <td class="f_time"><strong>23:05</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_time"><strong>01:10</strong><span>Noi Bai</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992219"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992219" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992219">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightdep" class="selectflight" value="vj146696992219" id="selectflightretvj146696992219">
+                          <label for="selectflightretvj146696992219">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj odd">
+                      <td class="f_code bg_vj">VJ146</td>
+                      <td class="f_time"><strong>23:25</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_time"><strong>01:30</strong><span>Noi Bai</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992220"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992220" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992220">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightdep" class="selectflight" value="vj146696992220" id="selectflightretvj146696992220">
+                          <label for="selectflightretvj146696992220">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj even">
+                      <td class="f_code bg_vj">VJ182</td>
+                      <td class="f_time"><strong>23:45</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_time"><strong>01:50</strong><span>Noi Bai</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992221"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992221" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992221">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightdep" class="selectflight" value="vj146696992221" id="selectflightretvj146696992221">
+                          <label for="selectflightretvj146696992221">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main js odd">
+                      <td class="f_code bg_js">BL 786</td>
+                      <td class="f_time"><strong>19:25</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_time"><strong>21:30</strong><span>Noi Bai</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>890,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="js14669699286"><span>Chi tiết vé</span></a>
+					  <br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-js14669699286" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-js14669699286">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightdep" class="selectflight" value="js14669699286" id="selectflightretjs14669699286">
+                          <label for="selectflightretjs14669699286">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main js even">
+                      <td class="f_code bg_js">BL 788</td>
+                      <td class="f_time"><strong>21:30</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_time"><strong>23:35</strong><span>Noi Bai</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>890,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="js14669699287"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-js14669699287" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-js14669699287">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightdep" class="selectflight" value="js14669699287" id="selectflightretjs14669699287">
+                          <label for="selectflightretjs14669699287">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                  <tfoot class="bg-white">
+                    <tr>
+                      <td colspan="6"><!-- pager -->
+                        
+                        <div class="pager pull-right">
+                          <nav class="right"> Trang : <span class="prev"> <img src="img/prev.png" /> Trước </span> <span class="pagecount"></span> <span class="next">Tiếp <img src="img/next.png" /> </span> </nav>
+                        </div></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <div class="fare"> 
+                <!--Thong Tin Chang Di-->
+                <div class="plane-title">
+                  <div class="col-md-12 "><i class="fa fa-map-signs text-lg"></i> <strong>Chiều về</strong> <span class="big">Hà Nội</span> - <span class="big">Hồ Chí Minh</span>
+				  <a class="popup-text pull-right text-white" href="#dialog-search" data-effect="mfp-zoom-out"><span class="hidden-xs">Thay đổi hành trình</span> <i class="text-lg soap-icon-search"></i></a>
+				  </div>
+                </div>
+                <ul class="date-picker  hidden-xs" style="display: block;">
+                  <li class="firstli"> <a rel="02/07/2016" class="changereturnflight"> <span>Thứ 7</span> <span>02/07/2016</span> </a> </li>
+                  <li> <a rel="03/07/2016" class="changereturnflight"> <span>Chủ nhật</span> <span>03/07/2016</span> </a> </li>
+                  <li> <a rel="04/07/2016" class="changereturnflight"> <span>Thứ 2</span> <span>04/07/2016</span> </a> </li>
+                  <li class="active"> <a rel="05/07/2016" class="changereturnflight"> <span>Thứ 3</span> <span>05/07/2016</span> </a> </li>
+                  <li> <a rel="06/07/2016" class="changereturnflight"> <span>Thứ 4</span> <span>06/07/2016</span> </a> </li>
+                  <li> <a rel="07/07/2016" class="changereturnflight"> <span>Thứ 5</span> <span>07/07/2016</span> </a> </li>
+                  <li> <a rel="08/07/2016" class="changereturnflight"> <span>Thứ 6</span> <span>08/07/2016</span> </a> </li>
+                </ul>
+                <!--Thong Tin Chang Di-->
+                <table class="table tablesorter flightlist tablesorter-blue" border="0" id="InBound">
+                  <thead class="hidden">
+                   <tr>
+                      <th class="sortairport">Chuyến bay</th>
+                      <th class="sorttime">Khởi hành</th>
+                      <th class="sorttime">Hạ cánh</th>
+                      <th class="sortprice">Giá vé</th>
+                      <th>Chi tiết</th>
+                      <th>Chọn</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="lineresult-main vj odd">
+                      <td class="f_code bg_vj">VJ177
+					  <span class="good-price">Giá tốt</span></td>
+                      <td class="f_time"><strong>23:00</strong><span>Noi Bai</span></td>
+                      <td class="f_time"><strong>01:05</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992245"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992245" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992245">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightret" class="selectflight" value="vj146696992245" id="selectflightretvj146696992245">
+                          <label for="selectflightretvj146696992245">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj even">
+                      <td class="f_code bg_vj">VJ171
+					  <span class="good-price">Giá tốt</span>
+					  </td>
+                      <td class="f_time"><strong>23:30</strong><span>Noi Bai</span></td>
+                      <td class="f_time"><strong>01:35</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992246"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992246" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992246">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightret" class="selectflight" value="vj146696992246" id="selectflightretvj146696992246">
+                          <label for="selectflightretvj146696992246">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main js odd">
+                      <td class="f_code bg_js">BL 781
+					  <span class="good-price">Giá tốt</span>
+					  </td>
+                      <td class="f_time"><strong>06:00</strong><span>Noi Bai</span></td>
+                      <td class="f_time"><strong>08:05</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="js14669699289"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-js14669699289" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-js14669699289">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightret" class="selectflight" value="js14669699289" id="selectflightretjs14669699289">
+                          <label for="selectflightretjs14669699289">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj even">
+                      <td class="f_code bg_vj"> VJ185</td>
+                      <td class="f_time"><strong>22:00</strong><span>Noi Bai</span></td>
+                      <td class="f_time"><strong>00:05</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>799,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992242"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992242" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992242">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightret" class="selectflight" value="vj146696992242" id="selectflightretvj146696992242">
+                          <label for="selectflightretvj146696992242">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj odd">
+                      <td class="f_code bg_vj">VJ175</td>
+                      <td class="f_time"><strong>22:35</strong><span>Noi Bai</span></td>
+                      <td class="f_time"><strong>00:40</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>900,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992243"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992243" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992243">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightret" class="selectflight" value="vj146696992243" id="selectflightretvj146696992243">
+                          <label for="selectflightretvj146696992243">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vj even">
+                      <td class="f_code bg_vj">VJ163</td>
+                      <td class="f_time"><strong>22:55</strong><span>Noi Bai</span></td>
+                      <td class="f_time"><strong>01:00</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>900,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vj146696992244"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vj146696992244" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vj146696992244">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightret" class="selectflight" value="vj146696992244" id="selectflightretvj146696992244">
+                          <label for="selectflightretvj146696992244">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vna odd">
+                      <td class="f_code bg_vnal">VN 789</td>
+                      <td class="f_time"><strong>07:05</strong><span>Noi Bai</span></td>
+                      <td class="f_time"><strong>09:10</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>1,220,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vna146707842319"><span>Chi tiết vé</span></a><br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vna146707842319" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vna146707842319">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé-->
+						</td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightret" class="selectflight" value="vna146707842319" id="selectflightretvna146707842319">
+                          <label for="selectflightretvna146707842319">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                    <tr class="lineresult-main vna even">
+                      <td class="f_code bg_vnal">VN 791</td>
+                      <td class="f_time"><strong>08:40</strong><span>Noi Bai</span></td>
+                      <td class="f_time"><strong>10:45</strong><span>Tan Son Nhat</span></td>
+                      <td class="f_price"><small>Giá chưa thuế phí</small>1,220,000 VND </td>
+                      <td class="f_detail hidden-xs"><a href="#" class="viewdetail" rel="vna146707842320"><span>Chi tiết vé</span></a>
+					  <br>
+					  <!---Điều kiện vé--> 
+                        <a class="popup-text" href="#dialog-vna146707842320" data-effect="mfp-zoom-out">Điều kiện vé</a>
+                        <div class="mfp-with-anim mfp-dialog mfp-search-dialog mfp-hide" id="dialog-vna146707842320">
+                          <h4 class="modal-title" id="myModalLabel">Điều kiện vé</h4>
+                          <div class="modal-body">
+                            <div class="info">
+                              <p class="mb10"><strong>Điều kiện về vé</strong></p>
+                              <p><span>Hoàn vé : </span>Không được phép.</p>
+                              <p><span>Thay đổi ngày, giờ bay : </span>Được phép, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Thay đổi hành trình : </span>Không được phép.</p>
+                              <p><span>Thay đổi tên hành khách : </span>Được phép cho toàn hành trình, thu phí 360,000vnđ và chênh lệch giá vé (nếu có).</p>
+                              <p><span>Điều kiện thay đổi : </span>Trước giờ khởi hành 3 tiếng.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!--End Điều kiện vé--></td>
+                      <td class="f_select"><div>
+                          <input type="radio" name="selectflightret" class="selectflight" value="vna1467078423120" id="selectflightretvna146707842320">
+                          <label for="selectflightretvna146707842320">Đặt vé</label>
+                        </div></td>
+                    </tr>
+                  </tbody>
+                  <tfoot class="bg-white">
+                    <tr>
+                      <td colspan="6"><!-- pager -->
+                        
+                        <div class="pager pull-right">
+                          <nav class="right"> Trang : <span class="prev"><img src="img/prev.png" /> Trước</span> <span class="pagecount"></span> <span class="next">Tiếp <img src="img/next.png" /> </span> </nav>
+                        </div></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <div id="flightselectbt" class="continue-flight-result scrollDown"> <span class="moreScroll visible-lg">Kéo xuống để xem thêm kết quả</span>
+                <button type="submit" id="sm_fselect" name="sm_fselect" class="btn-primary pull-right" ><span> Tiếp tục</span></button>
+                <br>
+                <span class="noneselect"></span> </div>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+        <div id="wgbox" class="col-xs-12 col-sm-12 col-md-4" style="display: block;">
+          <div  class="wgbox" >
+		  <div id="flightsort" style="display: block;">
+            
+			<h5 class="title-underline">Sắp xếp</h5>
+            <ul class="list-unstyled">
+              <li>
+                <label for="byprice" class="radio">
+                  <input type="radio" name="rdsort" class="rdsort" value="price" id="byprice" checked="checked">
+                  <span class="outer"><span class="inner"></span></span> Giá từ thấp tới cao</label>
+              </li>
+              <li>
+                <label for="byairline" class="radio">
+                  <input type="radio" name="rdsort" class="rdsort " value="airline" id="byairline">
+                  <span class="outer"><span class="inner"></span></span>Hãng hàng không</label>
+              </li>
+              <li>
+                <label for="bytime" class="radio">
+                  <input type="radio" name="rdsort" class="rdsort" value="time" id="bytime">
+                  <span class="outer"><span class="inner"></span></span>Thời gian khởi hành</label>
+              </li>
+            </ul>
+          </div>
+          <div id="filterflight" style="display: block;">
+            <h5 class="title-underline">Hãng hàng không</h5>
+            <ul class="list-unstyled">
+              <li class="checked">
+                <label for="filterall">
+                  <input type="checkbox" name="ckfilter" class="flightfilter checkbox" value="all" id="filterall" checked="checked" />
+                  Tất cả</label>
+              </li>
+              <li class="vna al checked">
+                <label for="filtervna">
+                  <input type="checkbox" name="ckfilter" class="flightfilter checkbox" value="vna" id="filtervna" checked="checked" />
+                  VietNam Airlines</label>
+              </li>
+              <li class="vj al checked">
+                <label for="filtervj">
+                  <input type="checkbox" name="ckfilter" class="flightfilter checkbox" value="vj" id="filtervj" checked="checked" />
+                  Vietjet Air</label>
+              </li>
+              <li class="js al checked">
+                <label for="filterjs">
+                  <input type="checkbox" name="ckfilter" class="flightfilter checkbox" value="js" id="filterjs" checked="checked" />
+                  Jetstar</label>
+              </li>
+            </ul>
+          </div>
+          </div>
+		  <div class="booking-help wgbox">
+            <h5 class="title-underline"> Hướng dẫn</h5>
+            <div class="box-content">
+              <ul class="list-unstyled">
+                <li> <a href="" title=""> <img src="img/icon01.png">Hướng dẫn đặt vé</a> </li>
+                <li> <a href="" title=""> <img src="img/icon02.png">Hướng dẫn thanh toán</a></li>
+                <li> <a href="" title=""> <img src="img/icon01.png">Câu hỏi thường gặp</a> </li>
+                <li><img src="img/icon03.png" class="pull-left"> <span class="text-color text-lg"> 08. 3862 2286</span></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <img class="img-responsive mt20" src="img/ads.jpg" alt=""> </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav_up" id="nav_up"><i class="fa fa-angle-up"></i></div>
+  <footer id="main-footer">
+    <div class="footer-primary">
+      <div class="container">
+        <div class="row row-wrap">
+          <div class="col-md-3">
+            <h4>Follow us</h4>
+            <ul class="list list-horizontal">
+              <li> <a class="fa fa-facebook box-icon-md box-icon-black box-icon-to-normal  animate-icon-bottom-to-top" href="#"></a> </li>
+              <li> <a class="fa fa-twitter box-icon-md box-icon-black box-icon-to-normal animate-icon-bottom-to-top" href="#"></a> </li>
+              <li> <a class="fa fa-google-plus box-icon-md box-icon-black box-icon-to-normal animate-icon-bottom-to-top" href="#"></a> </li>
+            </ul>
+            <a href="#" class="logo mt15" title="home"><img src="img/logo_white.png"alt="logo"></a> </div>
+          <div class="col-md-3">
+            <h4>Vé máy bay nội địa</h4>
+            <ul class="list list-space">
+              <li> <a href="#ve-may-bay-di-ha-noi.html" title="">Vé máy bay đi Hà Nội </a></li>
+              <li> <a href="#ve-may-bay-di-da-nang.html" title="">Vé máy bay đi Đà Nẵng </a></li>
+              <li> <a href="#ve-may-bay-di-vinh.html" title="">Vé máy bay đi Vinh </a></li>
+              <li> <a href="#ve-may-bay-di-hai-phong.html" title="">Vé máy bay đi Hải Phòng </a></li>
+              <li> <a href="#ve-may-bay-phu-quoc.html" title="">Vé máy bay Phú Quốc </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Vé máy bay quốc tế</h4>
+            <ul class="list list-space">
+              <li> <a href="#ve-may-bay-di-my.html" title=""> Vé máy bay đi Mỹ </a></li>
+              <li> <a href="#ve-may-bay-di-uc.html" title=""> Vé máy bay đi Úc </a></li>
+              <li> <a href="#ve-may-bay-di-anh.html" title=""> Vé máy bay đi Anh </a></li>
+              <li> <a href="#ve-may-bay-di-phap.html" title=""> Vé máy bay đi Pháp </a></li>
+              <li> <a href="#ve-may-bay-di-trung-quoc.html" title=""> Vé máy bay đi Trung Quốc </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul class="list list-space">
+              <li><a href="#kiem-tra-don-hang" title="Kiểm tra đơn hàng">Kiểm tra đơn hàng</a></li>
+              <li><a href="#huong-dan-dat-ve" title="Hướng dẫn đặt vé">Hướng dẫn đặt vé</a></li>
+              <li><a href="#huong-dan-thanh-toan" title="Thông tin thanh toán">Thông tin thanh toán</a></li>
+              <li><a href="#lcau-hoi-thuong-gap" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a></li>
+              <li><a href="#lien-he" title="Liên hệ chúng tôi">Liên hệ chúng tôi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6  copyright-block">
+            <p class="copyright-text">© Ve may bay ABC. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list list-horizontal list-space  pull-right">
+              <li> <img src="img/secure.png" alt=""> </li>
+              <li> <img src="img/authentication.png" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="js/libs/jquery-1.11.1.min.js"></script> 
+<script src='js/libs/jquery-ui.1.10.4.min.js'></script> 
+<script src="js/libs/modernizr.js"></script>
+<script src='js/libs/jquery-migrate.min.js'></script> 
+<script src="js/libs/bootstrap.min.js"></script> 
+<script src="js/libs/formValidation.min.js"></script> 
+<script src="js/libs/framework.bootstrap.min.js"></script> 
+<script src="js/libs/slimmenu.js"></script> 
+<script src="js/libs/dropit.js"></script> 
+<script src="js/libs/ionrangeslider.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> 
+<script src="js/libs/typeahead.bundle.min.js"></script> 
+<script src="js/libs/magnific.js"></script> 
+<script src="js/libs/owl-carousel.js"></script> 
+<script src="js/libs/wow.min.js"></script> 
+<script src='js/libs/jquery.tablesorter.js'></script>
+<script src='js/libs/jquery.tablesorter.pager.js'></script>
+<script src='js/libs/pager-custom-controls.js'></script>
+<script src="js/JQuery.main.js"></script> 
+<script src="js/JQuery.home.js"></script> 
+<script src="js/JQuery.sidebar.js"></script> 
+<script src="js/JQuery.result.js"></script> 
+<script src="js/JQuery.payment.js"></script> 
+<script src="js/JQuery.complete.js"></script> 
+<script src="js/JQuery.dlsearch.js"></script>
+
+<!--Facebook Googel+ Comment--> 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '299001920440908',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> 
+<script type="text/javascript">
+		window.___gcfg = {lang: 'vi'};
+		 
+		(function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/platform.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+    </script> 
+
+<!--End Commentbox-->
+
+</body>
+</html>

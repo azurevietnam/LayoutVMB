@@ -1,0 +1,1219 @@
+<html>
+<head>
+<title>Travel Agency</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="keywords" content="Travel Agency, Search flight" />
+<meta name="description" content="Travel - template for travel companies">
+<meta name="author" content="Tsoy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- /GOOGLE FONTS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.min.css">
+<link rel="stylesheet" href="css/formValidation.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/mystyles.css">
+
+<script type="text/javascript">siteurl="http://vemaybayabc.com"</script>
+</head>
+<body>
+<div class="global-wrap">
+   <header id="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"> <a class="logo" href="index.html"> <img src="img/logo.png" alt="Image Alternative text" title="Image Title" /> </a> </div>
+          <div class="col-md-9">
+            <div class="el-info ">
+              <ul class="list-inline">
+                <li class="hidden-sm hidden-xs"><i class="fa fa-heart box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Tìm chuyến bay dễ dàng</h3>
+                </li>
+                <li class="hidden-sm hidden-xs"><i class="fa  fa-check-square-o box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Xác nhận vé tức thì</h3>
+                </li>
+                <li class="hidden-sm hidden-xs"><i class="fa fa-credit-card box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Thanh toán đơn giản</h3>
+                </li>
+                <li> <i class="fa fa-phone box-icon-md  box-icon-left box-icon-border animate-icon-shake round"></i>
+                  <h3>Hỗ trợ 24/7<br>
+                    <strong class="text-color text-lg"> 1900 8888</strong></h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-navigation">
+      <div class="container">
+        <div class="nav">
+          <ul class="slimmenu" id="slimmenu">
+            <li class="active"><a href="#">Trang chủ</a> </li>
+            <li><a href="#">Vé rẻ trong tháng</a></li>
+            <li><a href="#">Tin khuyến mãi</a></li>
+            <li><a href="#">Cẩm nang du lịch</a></li>
+            <li><a href="#">Bạn cần biết</a>
+              <ul>
+                <li><a href="#">Hướng dẫn đặt vé</a> </li>
+                <li><a href="#">Hướng dẫn thanh toán</a> </li>
+                <li><a href="#">Thông tin tài khoản</a> </li>
+                <li><a href="#">Câu hỏi thường găp</a> </li>
+              </ul>
+            </li>
+            <li><a href="#">Pages</a>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="domestic.html">Domestic Flight</a></li>
+				<li><a href="international.html">International Flight</a></li>
+                <li><a href="passenger-detail.html">Passenger Detail</a> </li>
+				<li><a href="payment.html">Payment Methods</a></li>
+				<li><a href="complete-booking.html">Complete Bokking</a></li>
+                <li><a href="category.html">Category</a> </li>
+                <li><a href="post.html">Single Post</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="main-content"> 
+    
+    <!-- Breadcrumb -->
+    <div class="page-title-container">
+      <div class="container">
+        <ul class="breadcrumbs list list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li class="active">Passenger Detail</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Breadcrumb -->
+    
+    <div  class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8"> 
+          <!-- Progressbar -->
+	 		
+     <ul class="booking-step list list-inline row list-unstyled">
+      <li class="col-xs-3 step-item">
+			<a href="#"><div class="line"></div>
+            <div class="number">1</div><p class="hidden-xs">Chọn hành trình </p>
+          </a>
+      </li>
+      <li class="col-xs-3 step-item active">
+        <div class="line"></div>
+        <div class="number">2</div><p class="hidden-xs">Thông tin hành khách</p>
+         
+      </li>
+      <li class="col-xs-3 step-item">
+          <div class="line"></div>
+             <div class="number">3</div><p class="hidden-xs">Thông tin thanh toán</p>
+          
+      </li>
+      <li class="col-xs-3 step-item">
+           <div class="line"></div>
+             <div class="number">4</div><p class="hidden-xs">Hoàn tất</p>
+      </li>
+    </ul>
+  		
+           
+          <!-- End Progressbar -->
+          
+          <div class="passsenger">
+            <form action="" method="post" id="frmBookingFlight">
+              <!-- THÔNG TIN CHUYẾN BAY -->
+             <h4><span class="number">1</span> Chi tiết chuyến bay</h4> 	  
+              <div class="if-ticket">
+						
+			  <div class="field-table" width="100%">
+                  <div class="row">
+                    <div class="col-md-5 col-sm-6 col-xs-12">
+                      <label>Chuyến bay : <strong>Khứ hồi</strong></label>
+                    </div>
+                    <div class="col-md-7 col-sm-6 col-xs-12">
+                      <label>Số lượng : <strong>1 người lớn</strong></label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-5 col-sm-6 col-xs-12">
+                      <label>Ngày đi: <strong>27/06/2016</strong> </label>
+					  </div>
+                    <div class="col-md-7 col-sm-6 col-xs-12">
+                      <label>Ngày về: <strong>29/06/2016</strong></label>
+					  </div>
+                  </div>
+                </div>
+				<div class="double-line"></div>
+                <div class="field-table" width="100%"> 
+                  <!--Thong Tin Chang Di-->
+                  
+                <div class="row">
+                      <div class="col-md-2 col-sm-2 col-xs-12 bg_js"><span class="take-off text-color"><i class="soap-icon-plane-right mt10"></i></span></div>
+                      <div class="col-md-3 col-sm-3 col-xs-6"><b>Hà Nội (HAN)</b>
+                        <p>29/06/2016, <b>22:05</b></p>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-6"><b>Hồ Chí Minh (SGN)</b>
+                        <p>29/06/2016, <b>00:10</b></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12">Mã chuyến: <b>BL 787</b><br>
+                        Loại vé: <b>Starter</b></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2 col-sm-2 col-xs-12 bg_js"><span class="landing text-color"><i class="soap-icon-plane-left mt10"></i></span></div>
+                      <div class="col-md-3 col-sm-3 col-xs-6"><b>Hồ Chí Minh (SGN)</b>
+                        <p>30/06/2016, <b>12:25</b></p>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-6"><b>Hà Nội (HAN)</b>
+                        <p>30/06/2016, <b>14:30</b></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12">Mã chuyến: <b>BL 792</b><br>
+                        Loại vé: <b>Starter</b></div>
+                    </div>
+                    
+                </div>
+			   </div>
+               
+              <!-- THÔNG TIN HÀNH KHÁCH -->
+			   <h4><span class="number">2</span> Thông tin hành khách</h4> 
+              <div class="if-customer">
+			  
+			    <div class="ifcu-item">
+                  <div class="row gap-20">
+                    <div class="ifcu-title col-md-12"><strong>Hành khách 1<span> (Người lớn)</span></strong></div>
+                    <div class="col-md-2 col-sm-4 col-xs-5">
+                      <div class="form-group">
+                        <label>Quý danh <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <select name="passenger_title[]" class="form-control">
+                          <option value="0">Nam</option>
+                          <option value="1">Nữ</option>
+                        </select>
+                        <input type="hidden" name="passenger_type[]" value="1">
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-8 col-xs-7">
+                      <div class="form-group">
+                        <label>Họ và tên <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <input type="text" name="passenger_name[]" class="passenger_name form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <label>Ngày sinh <font style="color:#ED0000;font-weight:bold">*</font></label>
+                      <div class="form-group row">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthday[]" class="birthday form-control">
+                            <option value="0">Ngày</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthmonth[]" class="birthmonth form-control">
+                            <option value="0">Tháng</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthyear[]" class="birthyear form-control">
+                            <option value="0">Năm</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="0">------</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="0">------</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row gap-20">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Chiều đi</label>
+                        <select name="dep_addbaggage[]" class="dep_addbaggage form-control">
+                          <option value="0">Không mang hành lý ký gửi</option>
+                          <option value="180000">Thêm 15kg hành lý (180.000 VND/Khách)</option>
+                          <option value="210000">Thêm 20kg hành lý (210.000 VND/Khách)</option>
+                          <option value="270000">Thêm 25kg hành lý (270.000 VND/Khách)</option>
+                          <option value="320000">Thêm 30kg hành lý (320.000 VND/Khách)</option>
+                          <option value="370000">Thêm 35kg hành lý (370.000 VND/Khách)</option>
+                          <option value="420000">Thêm 40kg hành lý (420.000 VND/Khách)</option>
+                        </select>
+                      </div>
+                      <p>Tối đa 7 Kg hành lý xách tay.</p>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Chiều về</label>
+                        <select name="ret_addbaggage[]" class="ret_addbaggage form-control">
+                          <option value="0">Không mang hành lý ký gửi</option>
+                          <option value="180000">Thêm 15kg hành lý (180.000 VND/Khách)</option>
+                          <option value="210000">Thêm 20kg hành lý (210.000 VND/Khách)</option>
+                          <option value="270000">Thêm 25kg hành lý (270.000 VND/Khách)</option>
+                          <option value="320000">Thêm 30kg hành lý (320.000 VND/Khách)</option>
+                          <option value="370000">Thêm 35kg hành lý (370.000 VND/Khách)</option>
+                          <option value="420000">Thêm 40kg hành lý (420.000 VND/Khách)</option>
+                        </select>
+                      </div>
+                      <p>Tối đa 7 Kg hành lý xách tay.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ifcu-item">
+                  <div class="row gap-20">
+                    <div class="ifcu-title col-md-12"><strong>Hành khách 2<span> (Trẻ em)</span></strong></div>
+                    <div class="col-md-2 col-sm-4 col-xs-5">
+                      <div class="form-group">
+                        <label>Quý danh <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <select name="passenger_title[]" class="form-control">
+                          <option value="0">Nam</option>
+                          <option value="1">Nữ</option>
+                        </select>
+                        <input type="hidden" name="passenger_type[]" value="1">
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-8 col-xs-7">
+                      <div class="form-group">
+                        <label>Họ và tên <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <input type="text" name="passenger_name[]" class="passenger_name form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <label>Ngày sinh <font style="color:#ED0000;font-weight:bold">*</font></label>
+                      <div class="form-group row">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthday[]" class="birthday form-control">
+                            <option value="0">Ngày</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthmonth[]" class="birthmonth form-control">
+                            <option value="0">Tháng</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthyear[]" class="birthyear form-control">
+                            <option value="0">Năm</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="0">------</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="0">------</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row gap-20">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Chiều đi</label>
+                        <select name="dep_addbaggage[]" class="dep_addbaggage form-control">
+                          <option value="0">Không mang hành lý ký gửi</option>
+                          <option value="180000">Thêm 15kg hành lý (180.000 VND/Khách)</option>
+                          <option value="210000">Thêm 20kg hành lý (210.000 VND/Khách)</option>
+                          <option value="270000">Thêm 25kg hành lý (270.000 VND/Khách)</option>
+                          <option value="320000">Thêm 30kg hành lý (320.000 VND/Khách)</option>
+                          <option value="370000">Thêm 35kg hành lý (370.000 VND/Khách)</option>
+                          <option value="420000">Thêm 40kg hành lý (420.000 VND/Khách)</option>
+                        </select>
+                      </div>
+                      <p>Tối đa 7 Kg hành lý xách tay.</p>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Chiều về</label>
+                        <select name="ret_addbaggage[]" class="ret_addbaggage form-control">
+                          <option value="0">Không mang hành lý ký gửi</option>
+                          <option value="180000">Thêm 15kg hành lý (180.000 VND/Khách)</option>
+                          <option value="210000">Thêm 20kg hành lý (210.000 VND/Khách)</option>
+                          <option value="270000">Thêm 25kg hành lý (270.000 VND/Khách)</option>
+                          <option value="320000">Thêm 30kg hành lý (320.000 VND/Khách)</option>
+                          <option value="370000">Thêm 35kg hành lý (370.000 VND/Khách)</option>
+                          <option value="420000">Thêm 40kg hành lý (420.000 VND/Khách)</option>
+                        </select>
+                      </div>
+                      <p>Tối đa 7 Kg hành lý xách tay.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ifcu-item">
+                  <div class="row gap-20">
+                    <div class="ifcu-title col-md-12"><strong>Hành khách 3<span> (Em bé)</span></strong></div>
+                    <div class="col-md-2 col-sm-4 col-xs-5">
+                      <div class="form-group">
+                        <label>Quý danh <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <select name="passenger_title[]" class="form-control">
+                          <option value="0">Nam</option>
+                          <option value="1">Nữ</option>
+                        </select>
+                        <input type="hidden" name="passenger_type[]" value="1">
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-8 col-xs-7">
+                      <div class="form-group">
+                        <label>Họ và tên <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <input type="text" name="passenger_name[]" class="passenger_name form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                      <label>Ngày sinh <font style="color:#ED0000;font-weight:bold">*</font></label>
+                      <div class="form-group row">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthday[]" class="birthday form-control">
+                            <option value="0">Ngày</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthmonth[]" class="birthmonth form-control">
+                            <option value="0">Tháng</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <select name="passenger_birthyear[]" class="birthyear form-control">
+                            <option value="0">Năm</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="0">------</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="0">------</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--THÔNG TIN LIÊN HỆ-->
+               <h4><span class="number">3</span> Thông tin liên hệ</h4>
+              <div class="if-payment">
+			    <p style="margin:0 0 5px 0px;">(<font style="color:#ED0000;font-weight:bold">*</font>) Vui lòng cung cấp đầy đủ và chính xác thông tin của bạn. Mọi sai sót đều mất phí khi thay đổi lại !!</p>
+                <div class="field-table">
+                  <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-5">
+                      <div class="form-group">
+                        <label for="contact_title">Quý danh <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <select name="contact_title" id="contact_title" class="form-control">
+                          <option value="0">Ông</option>
+                          <option value="1">Bà</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-7">
+                      <div class="form-group">
+                        <label for="contact_name">Họ và tên <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <input type="text" name="contact_name" id="contact_name" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                      <div class="form-group">
+                        <label for="contact_phone">Điện thoại di động <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <input type="text" name="contact_phone" id="contact_phone" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-7 col-sm-7 col-xs-12">
+                      <div class="form-group">
+                        <label for="contact_email">Email <font style="color:#ED0000;font-weight:bold">*</font></label>
+                        <input type="text" name="contact_email" id="contact_email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                      <div class="form-group">
+                        <label for="contact_city">Tỉnh/Thành phố</label>
+                        <select name="contact_city" id="contact_city" class="form-control">
+                          <option value="TP Ho Chi Minh">TP Hồ Chí Minh</option>
+                          <option value="Ha Noi">Hà Nội</option>
+                          <option value="Hai Phong">Hải Phòng</option>
+                          <option value="Da Nang">Đà Nẵng</option>
+                          <option value="Khanh Hoa">Khánh Hòa</option>
+                          <option value="Dak Lak">Đắk Lắk</option>
+                          <option value="Lam Dong">Lâm Đồng</option>
+                          <option value="Thanh Hoa">Thanh Hoá</option>
+                          <option value="Thua Thien Hue">Thừa Thiên Huế</option>
+                          <option value="Ca Mau">Cà Mau</option>
+                          <option value="Can Tho">Cần Thơ</option>
+                          <option value="An Giang">An Giang</option>
+                          <option value="Bac Kan">Bắc Kạn</option>
+                          <option value="Bac Giang">Bắc Giang</option>
+                          <option value="Bac Lieu">Bạc Liêu</option>
+                          <option value="Bac Ninh">Bắc Ninh</option>
+                          <option value="Ben Tre">Bến Tre</option>
+                          <option value="Binh Dinh">Bình Định</option>
+                          <option value="Binh Duong">Bình Dương</option>
+                          <option value="Binh Phuoc">Bình Phước</option>
+                          <option value="Binh Thuan">Bình Thuận</option>
+                          <option value="Cao Dang">Cao Bằng</option>
+                          <option value="Dak Nong">Đắk Nông</option>
+                          <option value="Dien Bien">Điện Biên</option>
+                          <option value="Dong Nai">Đồng Nai</option>
+                          <option value="Dong Thap">Đồng Tháp</option>
+                          <option value="Gia Lai">Gia Lai</option>
+                          <option value="Ha Giang">Hà Giang</option>
+                          <option value="Ha Nam">Hà Nam</option>
+                          <option value="Ha Tinh">Hà Tĩnh</option>
+                          <option value="Hai Duong">Hải Dương</option>
+                          <option value="Hau Giang">Hậu Giang</option>
+                          <option value="Hoa Binh">Hoà Bình</option>
+                          <option value="Hung Yen">Hưng Yên</option>
+                          <option value="Kien Giang">Kiên Giang</option>
+                          <option value="Kon Tum">Kon Tum</option>
+                          <option value="Lang Son">Lạng Sơn</option>
+                          <option value="Lai Chau">Lai Châu</option>
+                          <option value="Lao Cai">Lào Cai</option>
+                          <option value="Long An">Long An</option>
+                          <option value="Nam Dinh">Nam Định</option>
+                          <option value="Nghe An">Nghệ An</option>
+                          <option value="Ninh Binh">Ninh Bình</option>
+                          <option value="Ninh Thuan">Ninh Thuận</option>
+                          <option value="Phu Tho">Phú Thọ</option>
+                          <option value="Phu Yen">Phú Yên</option>
+                          <option value="Quang Binh">Quảng Bình</option>
+                          <option value="Quang Nam">Quảng Nam</option>
+                          <option value="Quang Ngai">Quảng Ngãi</option>
+                          <option value="Quang Ninh">Quảng Ninh</option>
+                          <option value="Quang Tri">Quảng Trị</option>
+                          <option value="Soc Trang">Sóc Trăng</option>
+                          <option value="Tay Ninh">Tây Ninh</option>
+                          <option value="Thai Binh">Thái Bình</option>
+                          <option value="Thai Nguyen">Thái Nguyên</option>
+                          <option value="Tuyen Quang">Tuyên Quang</option>
+                          <option value="Tien Giang">Tiền Giang</option>
+                          <option value="Tra Vinh">Trà Vinh</option>
+                          <option value="Vinh Long">Vĩnh Long</option>
+                          <option value="Vinh Phuc">Vĩnh Phúc</option>
+                          <option value="Vung Tau">Vũng Tàu</option>
+                          <option value="Yen Bai">Yên Bái</option>
+                          <option value="Son La">Sơn La</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-7 col-sm-7 col-xs-12">
+                      <div class="form-group">
+                        <label for="contact_address">Địa chỉ</label>
+                        <input type="text" name="contact_address" id="contact_address" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                      <div class="form-group">
+                        <label for="contact_country">Quốc gia</label>
+                        <select name="contact_country" id="contact_country" class="form-control">
+                          <option value="AF">Afghanistan</option>
+                          <option value="AL">Albania</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AS">American Samoa</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AO">Angola</option>
+                          <option value="AI">Anguilla</option>
+                          <option value="AQ">Antarctica</option>
+                          <option value="AG">Antigua and Barbuda</option>
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AW">Aruba</option>
+                          <option value="AU">Australia</option>
+                          <option value="AT">Austria</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BM">Bermuda</option>
+                          <option value="BT">Bhutan</option>
+                          <option value="BO">Bolivia</option>
+                          <option value="BA">Bosnia and herzegowina</option>
+                          <option value="BW">Botswana</option>
+                          <option value="BV">Bouvet island</option>
+                          <option value="BR">Brazil</option>
+                          <option value="IO">British indian ocean territory</option>
+                          <option value="BN">Brunei darussalam</option>
+                          <option value="BG">Bulgaria</option>
+                          <option value="BF">Burkina faso</option>
+                          <option value="BI">Burundi</option>
+                          <option value="KH">Cambodia</option>
+                          <option value="CM">Cameroon</option>
+                          <option value="CA">Canada</option>
+                          <option value="CV">Cape verde</option>
+                          <option value="KY">Cayman islands</option>
+                          <option value="CF">Central african republic</option>
+                          <option value="TD">Chad</option>
+                          <option value="CL">Chile</option>
+                          <option value="CN">China</option>
+                          <option value="CX">Christmas island</option>
+                          <option value="CC">Cocos (keeling) islands</option>
+                          <option value="CO">Colombia</option>
+                          <option value="KM">Comoros</option>
+                          <option value="CG">Congo</option>
+                          <option value="CD">Congo, the drc</option>
+                          <option value="CK">Cook islands</option>
+                          <option value="CR">Costa rica</option>
+                          <option value="CI">Cote d'ivoire</option>
+                          <option value="HR">Croatia (local name: hrvatska)</option>
+                          <option value="CU">Cuba</option>
+                          <option value="CY">Cyprus</option>
+                          <option value="CZ">Czech republic</option>
+                          <option value="DK">Denmark</option>
+                          <option value="DJ">Djibouti</option>
+                          <option value="DM">Dominica</option>
+                          <option value="DO">Dominican republic</option>
+                          <option value="">East timor</option>
+                          <option value="EC">Ecuador</option>
+                          <option value="EG">Egypt</option>
+                          <option value="SV">El salvador</option>
+                          <option value="GQ">Equatorial guinea</option>
+                          <option value="ER">Eritrea</option>
+                          <option value="EE">Estonia</option>
+                          <option value="ET">Ethiopia</option>
+                          <option value="FK">Falkland islands (malvinas)</option>
+                          <option value="FO">Faroe islands</option>
+                          <option value="FJ">Fiji</option>
+                          <option value="FI">Finland</option>
+                          <option value="FR">France</option>
+                          <option value="">France, metropolitan</option>
+                          <option value="GF">French guiana</option>
+                          <option value="PF">French polynesia</option>
+                          <option value="TF">French Southern Territories</option>
+                          <option value="GA">Gabon</option>
+                          <option value="GM">Gambia</option>
+                          <option value="GE">Georgia</option>
+                          <option value="DE">Germany</option>
+                          <option value="GH">Ghana</option>
+                          <option value="GI">Gibraltar</option>
+                          <option value="GR">Greece</option>
+                          <option value="GL">Greenland</option>
+                          <option value="GD">Grenada</option>
+                          <option value="GP">Guadeloupe</option>
+                          <option value="GU">Guam</option>
+                          <option value="GT">Guatemala</option>
+                          <option value="GN">Guinea</option>
+                          <option value="GW">Guinea-bissau</option>
+                          <option value="GY">Guyana</option>
+                          <option value="HT">Haiti</option>
+                          <option value="HM">Heard and mc donald islands</option>
+                          <option value="VA">Holy see (vatican city state)</option>
+                          <option value="HN">Honduras</option>
+                          <option value="HK">Hong kong</option>
+                          <option value="HU">Hungary</option>
+                          <option value="IS">Iceland</option>
+                          <option value="IN">India</option>
+                          <option value="ID">Indonesia</option>
+                          <option value="IR">Iran (islamic republic of)</option>
+                          <option value="IQ">Iraq</option>
+                          <option value="IE">Ireland</option>
+                          <option value="IL">Israel</option>
+                          <option value="IT">Italy</option>
+                          <option value="JM">Jamaica</option>
+                          <option value="JP">Japan</option>
+                          <option value="JO">Jordan</option>
+                          <option value="KZ">Kazakhstan</option>
+                          <option value="KE">Kenya</option>
+                          <option value="KI">Kiribati</option>
+                          <option value="KP">Korea, d.p.r.o.</option>
+                          <option value="KW">Kuwait</option>
+                          <option value="KG">Kyrgyzstan</option>
+                          <option value="LA">Laos</option>
+                          <option value="LV">Latvia</option>
+                          <option value="LB">Lebanon</option>
+                          <option value="LS">Lesotho</option>
+                          <option value="LR">Liberia</option>
+                          <option value="LY">Libyan arab jamahiriya</option>
+                          <option value="LI">Liechtenstein</option>
+                          <option value="LT">Lithuania</option>
+                          <option value="LU">Luxembourg</option>
+                          <option value="MO">Macau</option>
+                          <option value="MK">Macedonia</option>
+                          <option value="MG">Madagascar</option>
+                          <option value="MW">Malawi</option>
+                          <option value="MY">Malaysia</option>
+                          <option value="MV">Maldives</option>
+                          <option value="ML">Mali</option>
+                          <option value="MT">Malta</option>
+                          <option value="MH">Marshall islands</option>
+                          <option value="MQ">Martinique</option>
+                          <option value="MR">Mauritania</option>
+                          <option value="MU">Mauritius</option>
+                          <option value="YT">Mayotte</option>
+                          <option value="MX">Mexico</option>
+                          <option value="FM">Micronesia, federated states of</option>
+                          <option value="MD">Moldova, republic of</option>
+                          <option value="MC">Monaco</option>
+                          <option value="MN">Mongolia</option>
+                          <option value="MS">Montserrat</option>
+                          <option value="MA">Morocco</option>
+                          <option value="MZ">Mozambique</option>
+                          <option value="MM">Myanmar (burma)</option>
+                          <option value="NA">Namibia</option>
+                          <option value="NR">Nauru</option>
+                          <option value="NP">Nepal</option>
+                          <option value="NL">Netherlands</option>
+                          <option value="AN">Netherlands Antilles</option>
+                          <option value="NC">New caledonia</option>
+                          <option value="NZ">New zealand</option>
+                          <option value="NI">Nicaragua</option>
+                          <option value="NE">Niger</option>
+                          <option value="NG">Nigeria</option>
+                          <option value="NU">Niue</option>
+                          <option value="NF">Norfolk island</option>
+                          <option value="MP">Northern mariana islands</option>
+                          <option value="NO">Norway</option>
+                          <option value="OM">Oman</option>
+                          <option value="PK">Pakistan</option>
+                          <option value="PW">Palau</option>
+                          <option value="PA">Panama</option>
+                          <option value="PG">Papua new guinea</option>
+                          <option value="PY">Paraguay</option>
+                          <option value="PE">Peru</option>
+                          <option value="PH">Philippines</option>
+                          <option value="PN">Pitcairn</option>
+                          <option value="PL">Poland</option>
+                          <option value="PT">Portugal</option>
+                          <option value="PR">Puerto rico</option>
+                          <option value="QA">Qatar</option>
+                          <option value="KR">Republic of korea</option>
+                          <option value="RE">Reunion</option>
+                          <option value="RO">Romania</option>
+                          <option value="RU">Russian federation</option>
+                          <option value="RW">Rwanda</option>
+                          <option value="KN">Saint kitts and nevis</option>
+                          <option value="LC">Saint lucia</option>
+                          <option value="VC">Saint vincent and the grenadines</option>
+                          <option value="WS">Samoa</option>
+                          <option value="SM">San marino</option>
+                          <option value="ST">Sao tome and principe</option>
+                          <option value="SA">Saudi arabia</option>
+                          <option value="SN">Senegal</option>
+                          <option value="SC">Seychelles</option>
+                          <option value="SL">Sierra leone</option>
+                          <option value="SG">Singapore</option>
+                          <option value="SK">Slovakia (slovak republic)</option>
+                          <option value="SI">Slovenia</option>
+                          <option value="SB">Solomon islands</option>
+                          <option value="SO">Somalia</option>
+                          <option value="ZA">South africa</option>
+                          <option value="GS">South georgia and south s.s.</option>
+                          <option value="ES">Spain</option>
+                          <option value="LK">Sri lanka</option>
+                          <option value="SH">St. helena</option>
+                          <option value="PM">St. pierre and miquelon</option>
+                          <option value="SD">Sudan</option>
+                          <option value="SR">Suriname</option>
+                          <option value="SJ">Svalbard and jan mayen islands</option>
+                          <option value="SZ">Swaziland</option>
+                          <option value="SE">Sweden</option>
+                          <option value="CH">Switzerland</option>
+                          <option value="SY">Syrian arab republic</option>
+                          <option value="TW">Taiwan, province of china</option>
+                          <option value="TJ">Tajikistan</option>
+                          <option value="TZ">Tanzania, united republic of</option>
+                          <option value="TH">Thailand</option>
+                          <option value="TG">Togo</option>
+                          <option value="TK">Tokelau</option>
+                          <option value="TO">Tonga</option>
+                          <option value="TT">Trinidad and tobago</option>
+                          <option value="TN">Tunisia</option>
+                          <option value="TR">Turkey</option>
+                          <option value="TM">Turkmenistan</option>
+                          <option value="TC">Turks and caicos islands</option>
+                          <option value="TV">Tuvalu</option>
+                          <option value="UM">U.s. minor islands</option>
+                          <option value="UG">Uganda</option>
+                          <option value="UA">Ukraine</option>
+                          <option value="AE">United Arab Emirates</option>
+                          <option value="GB">United kingdom</option>
+                          <option value="US">United States</option>
+                          <option value="UY">Uruguay</option>
+                          <option value="UZ">Uzbekistan</option>
+                          <option value="VU">Vanuatu</option>
+                          <option value="VE">Venezuela</option>
+                          <option value="VN" selected="selected">Việt Nam</option>
+                          <option value="VG">Virgin islands (british)</option>
+                          <option value="VI">Virgin islands (u.s.)</option>
+                          <option value="WF">Wallis and futuna islands</option>
+                          <option value="EH">Western sahara</option>
+                          <option value="YE">Yemen</option>
+                          <option value="">Yugoslavia (serbia and montenegro)</option>
+                          <option value="ZM">Zambia</option>
+                          <option value="ZW">Zimbabwe</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p id="err_info" class="line_error"></p>
+                <p>Ghi chú khác của bạn</p>
+                <div class="field-table">
+                  <div>
+                    <textarea name="special_request" class="form-control" rows="5"></textarea>
+                  </div>
+                </div>
+                <button type="submit" id="sm_bookingflight" name="sm_bookingflight" class="btn btn-primary mt30 pull-right"> Tiếp tục</button>
+              </div>
+              <div class="clearfix"></div>
+              <!--end coleft-->
+            </form>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="summary-info bg-dark">
+            <h4>Thông tin đơn hàng</h4>
+            <!-------LƯỢT ĐI-----------> 
+            
+            <a class="link" title="">Chiều đi<span class="pull-right"><i></i></span></a>
+            <table width="100%" class="field-table info">
+              <tbody>
+                <tr>
+                  <td colspan="5"><strong>Giá vé cơ bản</strong></td>
+                </tr>
+                <tr>
+                  <td>Người lớn </td>
+                  <td class="text-right"><b>2</b> x </td>
+                  <td class="text-right">790,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">1,580,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Trẻ em </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">790,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">790,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Em bé </td>
+                  <td  class="text-right"><b>1</b> x </td>
+                  <td  class="text-right">0 VND</td>
+                  <td>=</td>
+                  <td  class="text-right">0 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5"><strong>Thuế và phí</strong></td>
+                </tr>
+                <tr>
+                  <td>Người lớn </td>
+                  <td class="text-right"><b>2</b> x </td>
+                  <td class="text-right">369,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">738,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Trẻ em </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">324,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">324,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Em bé </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">190,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">190,000 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="line"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Tổng giá</td>
+                  <td colspan="3"  class="text-right">3,622,000 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Hành lý thêm</td>
+                  <td colspan="3"  class="text-right"><span id="booking-info-dep-bag-total">0 VND</span></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Giảm giá</td>
+                  <td colspan="3"  class="text-right">- 0 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="line"></td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="text-right"><p>Lượt đi tổng cộng</p>
+                    <p class="text-bigger">3,622,000 VND</p></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-------LƯỢT VỂ-----------> 
+            <a class="link" title="">Chiều về<span class="pull-right"><i></i></span></a>
+            <table width="100%" class="field-table info">
+              <tbody>
+                <tr>
+                  <td colspan="5"><strong>Giá vé cơ bản</strong></td>
+                </tr>
+                <tr>
+                  <td>Người lớn </td>
+                  <td class="text-right"><b>2</b> x </td>
+                  <td class="text-right">900,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">1,800,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Trẻ em </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">900,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">900,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Em bé </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">0 VND</td>
+                  <td>=</td>
+                  <td  class="text-right">0 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5"><strong>Thuế và phí</strong></td>
+                </tr>
+                <tr>
+                  <td>Người lớn </td>
+                  <td class="text-right"><b>2</b> x </td>
+                  <td class="text-right">380,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">760,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Trẻ em </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">335,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">335,000 VND</td>
+                </tr>
+                <tr>
+                  <td>Em bé </td>
+                  <td class="text-right"><b>1</b> x </td>
+                  <td class="text-right">150,000 VND</td>
+                  <td>=</td>
+                  <td class="text-right">150,000 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="line"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Tổng giá</td>
+                  <td colspan="3" class="text-right">3,945,000 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Hành lý thêm</td>
+                  <td colspan="3"  class="text-right"><span>0 VND</span></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >Giảm giá</td>
+                  <td colspan="3"  class="text-right">- 0 VND</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="line"></td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="text-right">Lượt về tổng cộng
+                    </p>
+                    <p class="text-bigger">3,945,000 VND</p></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="summary-info-line gap"> <span class="pull-left">TỔNG CỘNG</span> <span class="pull-right text-color text-bigger">7,567,000 VND</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav_up" id="nav_up"><i class="fa fa-angle-up"></i></div>
+  <footer id="main-footer">
+    <div class="footer-primary">
+      <div class="container">
+        <div class="row row-wrap">
+          <div class="col-md-3">
+            <h4>Follow us</h4>
+            <ul class="list list-horizontal">
+              <li> <a class="fa fa-facebook box-icon-md box-icon-black box-icon-to-normal  animate-icon-bottom-to-top" href="#"></a> </li>
+              <li> <a class="fa fa-twitter box-icon-md box-icon-black box-icon-to-normal animate-icon-bottom-to-top" href="#"></a> </li>
+              <li> <a class="fa fa-google-plus box-icon-md box-icon-black box-icon-to-normal animate-icon-bottom-to-top" href="#"></a> </li>
+            </ul>
+            <a href="#" class="logo mt15" title="home"><img src="img/logo_white.png"alt="logo"></a> </div>
+          <div class="col-md-3">
+            <h4>Vé máy bay nội địa</h4>
+            <ul class="list list-space">
+              <li> <a href="#ve-may-bay-di-ha-noi.html" title="">Vé máy bay đi Hà Nội </a></li>
+              <li> <a href="#ve-may-bay-di-da-nang.html" title="">Vé máy bay đi Đà Nẵng </a></li>
+              <li> <a href="#ve-may-bay-di-vinh.html" title="">Vé máy bay đi Vinh </a></li>
+              <li> <a href="#ve-may-bay-di-hai-phong.html" title="">Vé máy bay đi Hải Phòng </a></li>
+              <li> <a href="#ve-may-bay-phu-quoc.html" title="">Vé máy bay Phú Quốc </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Vé máy bay quốc tế</h4>
+            <ul class="list list-space">
+              <li> <a href="#ve-may-bay-di-my.html" title=""> Vé máy bay đi Mỹ </a></li>
+              <li> <a href="#ve-may-bay-di-uc.html" title=""> Vé máy bay đi Úc </a></li>
+              <li> <a href="#ve-may-bay-di-anh.html" title=""> Vé máy bay đi Anh </a></li>
+              <li> <a href="#ve-may-bay-di-phap.html" title=""> Vé máy bay đi Pháp </a></li>
+              <li> <a href="#ve-may-bay-di-trung-quoc.html" title=""> Vé máy bay đi Trung Quốc </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul class="list list-space">
+              <li><a href="#kiem-tra-don-hang" title="Kiểm tra đơn hàng">Kiểm tra đơn hàng</a></li>
+              <li><a href="#huong-dan-dat-ve" title="Hướng dẫn đặt vé">Hướng dẫn đặt vé</a></li>
+              <li><a href="#huong-dan-thanh-toan" title="Thông tin thanh toán">Thông tin thanh toán</a></li>
+              <li><a href="#lcau-hoi-thuong-gap" title="Câu hỏi thường gặp">Câu hỏi thường gặp</a></li>
+              <li><a href="#lien-he" title="Liên hệ chúng tôi">Liên hệ chúng tôi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6  copyright-block">
+            <p class="copyright-text">© Ve may bay ABC. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list list-horizontal list-space  pull-right">
+              <li> <img src="img/secure.png" alt=""> </li>
+              <li> <img src="img/authentication.png" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+ </div>
+ 
+<script src="js/libs/jquery-1.11.1.min.js"></script> 
+<script src='js/libs/jquery-ui.1.10.4.min.js'></script> 
+<script src="js/libs/modernizr.js"></script>
+<script src='js/libs/jquery-migrate.min.js'></script> 
+<script src="js/libs/bootstrap.min.js"></script> 
+<script src="js/libs/formValidation.min.js"></script> 
+<script src="js/libs/framework.bootstrap.min.js"></script> 
+<script src="js/libs/slimmenu.js"></script> 
+<script src="js/libs/dropit.js"></script> 
+<script src="js/libs/ionrangeslider.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> 
+<script src="js/libs/typeahead.bundle.min.js"></script> 
+<script src="js/libs/magnific.js"></script> 
+<script src="js/libs/owl-carousel.js"></script> 
+<script src="js/libs/wow.min.js"></script> 
+<script src='js/libs/jquery.tablesorter.js'></script>
+<script src='js/libs/jquery.tablesorter.pager.js'></script>
+<script src='js/libs/pager-custom-controls.js'></script>
+<script src="js/JQuery.main.js"></script> 
+<script src="js/JQuery.home.js"></script> 
+<script src="js/JQuery.sidebar.js"></script> 
+<script src="js/JQuery.result.js"></script> 
+<script src="js/JQuery.payment.js"></script> 
+<script src="js/JQuery.complete.js"></script> 
+
+ <!--Facebook Googel+ Comment--> 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '299001920440908',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> 
+<script type="text/javascript">
+		window.___gcfg = {lang: 'vi'};
+		 
+		(function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/platform.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+    </script> 
+
+<!--End Commentbox-->
+
+
+</body>
+</html>
